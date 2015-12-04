@@ -7,10 +7,21 @@ intrptr_templ = Template( open('intrptr_h_templ.jinja', 'r').read() )
 #### file  for instruction generator output
 f_gen_instruc = open("gen_instructions.h", "w")
 #### file for processes generator generator output
-f_gen_intrprt = open("gen_interpr_inst.h", "w")
+f_gen_intrprt = open("gen_interpreter_instr.h", "w")
 
 ## process types X is replaced down in fourth for
-p_types = [['X'], ['X', 'X'], ['X', 'offset'], ['offset', 'X'], ['offset']]
+p_types = [
+	# vysledok????
+	['X', 'X'], 
+	['X', 'offset'], 
+	['offset', 'X'],
+	['offset', 'offset'],
+	# 
+	['offset', 'X' ,'X'],
+	['offset', 'X' ,'offset'],
+	['offset', 'offset' ,'X'],
+	['offset', 'offset' ,'offset']
+]
 ## 
 
 ## instruction types
@@ -56,7 +67,8 @@ for instruction in aritm_instructions:
 				else: 
 					G.append('offset')
 			print instruction[0] + i_type +"_".join(G)
-			f_gen_instruc.write( instruc_templ.render(	i_name = instruction[0] + i_type, data_type = 'INT' if i_type == 'I' else 'DOUBLE', i_op = instruction[1], inst_type = "_".join(G)))
+			f_gen_instruc.write( instruc_templ.render(	inst_name = instruction[0] + i_type, data_type = 'INT' if i_type == 'I' else 'DOUBLE', proc_op = instruction[1], inst_type = "_".join(G)))
+			f_gen_intrprt.write( intrptr_templ.render(	inst_name = instruction[0] + i_type, data_type = 'INT' if i_type == 'I' else 'DOUBLE', proc_op = instruction[1], inst_type = "_".join(G)))			
 f_gen_instruc.write(footer_instr)
 
 ###########################################################################################					

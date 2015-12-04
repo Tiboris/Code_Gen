@@ -23,19 +23,6 @@
 
 
 /*
-Generated ADDI_int
-*/
-INSTR_T create_I_ADDI_int_instr(const int a, const int b) {
-    instruction_t *i = calloc(1, sizeof(instruction_t));
-
-    i->type = I_ADDI_int;
-    ZVAL_INIT_INT(i->first, a);
-    ZVAL_INIT_INT(i->second, b);
-
-    return i;
-}
-/********************************************************************************/
-/*
 Generated ADDI_int_int
 */
 INSTR_T create_I_ADDI_int_int_instr(const int a, const int b) {
@@ -75,12 +62,12 @@ INSTR_T create_I_ADDI_offset_int_instr(const int a, const int b) {
 }
 /********************************************************************************/
 /*
-Generated ADDI_offset
+Generated ADDI_offset_offset
 */
-INSTR_T create_I_ADDI_offset_instr(const int a, const int b) {
+INSTR_T create_I_ADDI_offset_offset_instr(const int a, const int b) {
     instruction_t *i = calloc(1, sizeof(instruction_t));
 
-    i->type = I_ADDI_offset;
+    i->type = I_ADDI_offset_offset;
     ZVAL_INIT_INT(i->first, a);
     ZVAL_INIT_INT(i->second, b);
 
@@ -88,14 +75,53 @@ INSTR_T create_I_ADDI_offset_instr(const int a, const int b) {
 }
 /********************************************************************************/
 /*
-Generated ADDD_double
+Generated ADDI_offset_int_int
 */
-INSTR_T create_I_ADDD_double_instr(const int a, const int b) {
+INSTR_T create_I_ADDI_offset_int_int_instr(const int a, const int b) {
     instruction_t *i = calloc(1, sizeof(instruction_t));
 
-    i->type = I_ADDD_double;
-    ZVAL_INIT_DOUBLE(i->first, a);
-    ZVAL_INIT_DOUBLE(i->second, b);
+    i->type = I_ADDI_offset_int_int;
+    ZVAL_INIT_INT(i->first, a);
+    ZVAL_INIT_INT(i->second, b);
+
+    return i;
+}
+/********************************************************************************/
+/*
+Generated ADDI_offset_int_offset
+*/
+INSTR_T create_I_ADDI_offset_int_offset_instr(const int a, const int b) {
+    instruction_t *i = calloc(1, sizeof(instruction_t));
+
+    i->type = I_ADDI_offset_int_offset;
+    ZVAL_INIT_INT(i->first, a);
+    ZVAL_INIT_INT(i->second, b);
+
+    return i;
+}
+/********************************************************************************/
+/*
+Generated ADDI_offset_offset_int
+*/
+INSTR_T create_I_ADDI_offset_offset_int_instr(const int a, const int b) {
+    instruction_t *i = calloc(1, sizeof(instruction_t));
+
+    i->type = I_ADDI_offset_offset_int;
+    ZVAL_INIT_INT(i->first, a);
+    ZVAL_INIT_INT(i->second, b);
+
+    return i;
+}
+/********************************************************************************/
+/*
+Generated ADDI_offset_offset_offset
+*/
+INSTR_T create_I_ADDI_offset_offset_offset_instr(const int a, const int b) {
+    instruction_t *i = calloc(1, sizeof(instruction_t));
+
+    i->type = I_ADDI_offset_offset_offset;
+    ZVAL_INIT_INT(i->first, a);
+    ZVAL_INIT_INT(i->second, b);
 
     return i;
 }
@@ -140,12 +166,12 @@ INSTR_T create_I_ADDD_offset_double_instr(const int a, const int b) {
 }
 /********************************************************************************/
 /*
-Generated ADDD_offset
+Generated ADDD_offset_offset
 */
-INSTR_T create_I_ADDD_offset_instr(const int a, const int b) {
+INSTR_T create_I_ADDD_offset_offset_instr(const int a, const int b) {
     instruction_t *i = calloc(1, sizeof(instruction_t));
 
-    i->type = I_ADDD_offset;
+    i->type = I_ADDD_offset_offset;
     ZVAL_INIT_DOUBLE(i->first, a);
     ZVAL_INIT_DOUBLE(i->second, b);
 
@@ -153,14 +179,53 @@ INSTR_T create_I_ADDD_offset_instr(const int a, const int b) {
 }
 /********************************************************************************/
 /*
-Generated SUBI_int
+Generated ADDD_offset_double_double
 */
-INSTR_T create_I_SUBI_int_instr(const int a, const int b) {
+INSTR_T create_I_ADDD_offset_double_double_instr(const int a, const int b) {
     instruction_t *i = calloc(1, sizeof(instruction_t));
 
-    i->type = I_SUBI_int;
-    ZVAL_INIT_INT(i->first, a);
-    ZVAL_INIT_INT(i->second, b);
+    i->type = I_ADDD_offset_double_double;
+    ZVAL_INIT_DOUBLE(i->first, a);
+    ZVAL_INIT_DOUBLE(i->second, b);
+
+    return i;
+}
+/********************************************************************************/
+/*
+Generated ADDD_offset_double_offset
+*/
+INSTR_T create_I_ADDD_offset_double_offset_instr(const int a, const int b) {
+    instruction_t *i = calloc(1, sizeof(instruction_t));
+
+    i->type = I_ADDD_offset_double_offset;
+    ZVAL_INIT_DOUBLE(i->first, a);
+    ZVAL_INIT_DOUBLE(i->second, b);
+
+    return i;
+}
+/********************************************************************************/
+/*
+Generated ADDD_offset_offset_double
+*/
+INSTR_T create_I_ADDD_offset_offset_double_instr(const int a, const int b) {
+    instruction_t *i = calloc(1, sizeof(instruction_t));
+
+    i->type = I_ADDD_offset_offset_double;
+    ZVAL_INIT_DOUBLE(i->first, a);
+    ZVAL_INIT_DOUBLE(i->second, b);
+
+    return i;
+}
+/********************************************************************************/
+/*
+Generated ADDD_offset_offset_offset
+*/
+INSTR_T create_I_ADDD_offset_offset_offset_instr(const int a, const int b) {
+    instruction_t *i = calloc(1, sizeof(instruction_t));
+
+    i->type = I_ADDD_offset_offset_offset;
+    ZVAL_INIT_DOUBLE(i->first, a);
+    ZVAL_INIT_DOUBLE(i->second, b);
 
     return i;
 }
@@ -205,12 +270,12 @@ INSTR_T create_I_SUBI_offset_int_instr(const int a, const int b) {
 }
 /********************************************************************************/
 /*
-Generated SUBI_offset
+Generated SUBI_offset_offset
 */
-INSTR_T create_I_SUBI_offset_instr(const int a, const int b) {
+INSTR_T create_I_SUBI_offset_offset_instr(const int a, const int b) {
     instruction_t *i = calloc(1, sizeof(instruction_t));
 
-    i->type = I_SUBI_offset;
+    i->type = I_SUBI_offset_offset;
     ZVAL_INIT_INT(i->first, a);
     ZVAL_INIT_INT(i->second, b);
 
@@ -218,14 +283,53 @@ INSTR_T create_I_SUBI_offset_instr(const int a, const int b) {
 }
 /********************************************************************************/
 /*
-Generated SUBD_double
+Generated SUBI_offset_int_int
 */
-INSTR_T create_I_SUBD_double_instr(const int a, const int b) {
+INSTR_T create_I_SUBI_offset_int_int_instr(const int a, const int b) {
     instruction_t *i = calloc(1, sizeof(instruction_t));
 
-    i->type = I_SUBD_double;
-    ZVAL_INIT_DOUBLE(i->first, a);
-    ZVAL_INIT_DOUBLE(i->second, b);
+    i->type = I_SUBI_offset_int_int;
+    ZVAL_INIT_INT(i->first, a);
+    ZVAL_INIT_INT(i->second, b);
+
+    return i;
+}
+/********************************************************************************/
+/*
+Generated SUBI_offset_int_offset
+*/
+INSTR_T create_I_SUBI_offset_int_offset_instr(const int a, const int b) {
+    instruction_t *i = calloc(1, sizeof(instruction_t));
+
+    i->type = I_SUBI_offset_int_offset;
+    ZVAL_INIT_INT(i->first, a);
+    ZVAL_INIT_INT(i->second, b);
+
+    return i;
+}
+/********************************************************************************/
+/*
+Generated SUBI_offset_offset_int
+*/
+INSTR_T create_I_SUBI_offset_offset_int_instr(const int a, const int b) {
+    instruction_t *i = calloc(1, sizeof(instruction_t));
+
+    i->type = I_SUBI_offset_offset_int;
+    ZVAL_INIT_INT(i->first, a);
+    ZVAL_INIT_INT(i->second, b);
+
+    return i;
+}
+/********************************************************************************/
+/*
+Generated SUBI_offset_offset_offset
+*/
+INSTR_T create_I_SUBI_offset_offset_offset_instr(const int a, const int b) {
+    instruction_t *i = calloc(1, sizeof(instruction_t));
+
+    i->type = I_SUBI_offset_offset_offset;
+    ZVAL_INIT_INT(i->first, a);
+    ZVAL_INIT_INT(i->second, b);
 
     return i;
 }
@@ -270,12 +374,12 @@ INSTR_T create_I_SUBD_offset_double_instr(const int a, const int b) {
 }
 /********************************************************************************/
 /*
-Generated SUBD_offset
+Generated SUBD_offset_offset
 */
-INSTR_T create_I_SUBD_offset_instr(const int a, const int b) {
+INSTR_T create_I_SUBD_offset_offset_instr(const int a, const int b) {
     instruction_t *i = calloc(1, sizeof(instruction_t));
 
-    i->type = I_SUBD_offset;
+    i->type = I_SUBD_offset_offset;
     ZVAL_INIT_DOUBLE(i->first, a);
     ZVAL_INIT_DOUBLE(i->second, b);
 
@@ -283,14 +387,53 @@ INSTR_T create_I_SUBD_offset_instr(const int a, const int b) {
 }
 /********************************************************************************/
 /*
-Generated MULI_int
+Generated SUBD_offset_double_double
 */
-INSTR_T create_I_MULI_int_instr(const int a, const int b) {
+INSTR_T create_I_SUBD_offset_double_double_instr(const int a, const int b) {
     instruction_t *i = calloc(1, sizeof(instruction_t));
 
-    i->type = I_MULI_int;
-    ZVAL_INIT_INT(i->first, a);
-    ZVAL_INIT_INT(i->second, b);
+    i->type = I_SUBD_offset_double_double;
+    ZVAL_INIT_DOUBLE(i->first, a);
+    ZVAL_INIT_DOUBLE(i->second, b);
+
+    return i;
+}
+/********************************************************************************/
+/*
+Generated SUBD_offset_double_offset
+*/
+INSTR_T create_I_SUBD_offset_double_offset_instr(const int a, const int b) {
+    instruction_t *i = calloc(1, sizeof(instruction_t));
+
+    i->type = I_SUBD_offset_double_offset;
+    ZVAL_INIT_DOUBLE(i->first, a);
+    ZVAL_INIT_DOUBLE(i->second, b);
+
+    return i;
+}
+/********************************************************************************/
+/*
+Generated SUBD_offset_offset_double
+*/
+INSTR_T create_I_SUBD_offset_offset_double_instr(const int a, const int b) {
+    instruction_t *i = calloc(1, sizeof(instruction_t));
+
+    i->type = I_SUBD_offset_offset_double;
+    ZVAL_INIT_DOUBLE(i->first, a);
+    ZVAL_INIT_DOUBLE(i->second, b);
+
+    return i;
+}
+/********************************************************************************/
+/*
+Generated SUBD_offset_offset_offset
+*/
+INSTR_T create_I_SUBD_offset_offset_offset_instr(const int a, const int b) {
+    instruction_t *i = calloc(1, sizeof(instruction_t));
+
+    i->type = I_SUBD_offset_offset_offset;
+    ZVAL_INIT_DOUBLE(i->first, a);
+    ZVAL_INIT_DOUBLE(i->second, b);
 
     return i;
 }
@@ -335,12 +478,12 @@ INSTR_T create_I_MULI_offset_int_instr(const int a, const int b) {
 }
 /********************************************************************************/
 /*
-Generated MULI_offset
+Generated MULI_offset_offset
 */
-INSTR_T create_I_MULI_offset_instr(const int a, const int b) {
+INSTR_T create_I_MULI_offset_offset_instr(const int a, const int b) {
     instruction_t *i = calloc(1, sizeof(instruction_t));
 
-    i->type = I_MULI_offset;
+    i->type = I_MULI_offset_offset;
     ZVAL_INIT_INT(i->first, a);
     ZVAL_INIT_INT(i->second, b);
 
@@ -348,14 +491,53 @@ INSTR_T create_I_MULI_offset_instr(const int a, const int b) {
 }
 /********************************************************************************/
 /*
-Generated MULD_double
+Generated MULI_offset_int_int
 */
-INSTR_T create_I_MULD_double_instr(const int a, const int b) {
+INSTR_T create_I_MULI_offset_int_int_instr(const int a, const int b) {
     instruction_t *i = calloc(1, sizeof(instruction_t));
 
-    i->type = I_MULD_double;
-    ZVAL_INIT_DOUBLE(i->first, a);
-    ZVAL_INIT_DOUBLE(i->second, b);
+    i->type = I_MULI_offset_int_int;
+    ZVAL_INIT_INT(i->first, a);
+    ZVAL_INIT_INT(i->second, b);
+
+    return i;
+}
+/********************************************************************************/
+/*
+Generated MULI_offset_int_offset
+*/
+INSTR_T create_I_MULI_offset_int_offset_instr(const int a, const int b) {
+    instruction_t *i = calloc(1, sizeof(instruction_t));
+
+    i->type = I_MULI_offset_int_offset;
+    ZVAL_INIT_INT(i->first, a);
+    ZVAL_INIT_INT(i->second, b);
+
+    return i;
+}
+/********************************************************************************/
+/*
+Generated MULI_offset_offset_int
+*/
+INSTR_T create_I_MULI_offset_offset_int_instr(const int a, const int b) {
+    instruction_t *i = calloc(1, sizeof(instruction_t));
+
+    i->type = I_MULI_offset_offset_int;
+    ZVAL_INIT_INT(i->first, a);
+    ZVAL_INIT_INT(i->second, b);
+
+    return i;
+}
+/********************************************************************************/
+/*
+Generated MULI_offset_offset_offset
+*/
+INSTR_T create_I_MULI_offset_offset_offset_instr(const int a, const int b) {
+    instruction_t *i = calloc(1, sizeof(instruction_t));
+
+    i->type = I_MULI_offset_offset_offset;
+    ZVAL_INIT_INT(i->first, a);
+    ZVAL_INIT_INT(i->second, b);
 
     return i;
 }
@@ -400,12 +582,12 @@ INSTR_T create_I_MULD_offset_double_instr(const int a, const int b) {
 }
 /********************************************************************************/
 /*
-Generated MULD_offset
+Generated MULD_offset_offset
 */
-INSTR_T create_I_MULD_offset_instr(const int a, const int b) {
+INSTR_T create_I_MULD_offset_offset_instr(const int a, const int b) {
     instruction_t *i = calloc(1, sizeof(instruction_t));
 
-    i->type = I_MULD_offset;
+    i->type = I_MULD_offset_offset;
     ZVAL_INIT_DOUBLE(i->first, a);
     ZVAL_INIT_DOUBLE(i->second, b);
 
@@ -413,14 +595,53 @@ INSTR_T create_I_MULD_offset_instr(const int a, const int b) {
 }
 /********************************************************************************/
 /*
-Generated DIVI_int
+Generated MULD_offset_double_double
 */
-INSTR_T create_I_DIVI_int_instr(const int a, const int b) {
+INSTR_T create_I_MULD_offset_double_double_instr(const int a, const int b) {
     instruction_t *i = calloc(1, sizeof(instruction_t));
 
-    i->type = I_DIVI_int;
-    ZVAL_INIT_INT(i->first, a);
-    ZVAL_INIT_INT(i->second, b);
+    i->type = I_MULD_offset_double_double;
+    ZVAL_INIT_DOUBLE(i->first, a);
+    ZVAL_INIT_DOUBLE(i->second, b);
+
+    return i;
+}
+/********************************************************************************/
+/*
+Generated MULD_offset_double_offset
+*/
+INSTR_T create_I_MULD_offset_double_offset_instr(const int a, const int b) {
+    instruction_t *i = calloc(1, sizeof(instruction_t));
+
+    i->type = I_MULD_offset_double_offset;
+    ZVAL_INIT_DOUBLE(i->first, a);
+    ZVAL_INIT_DOUBLE(i->second, b);
+
+    return i;
+}
+/********************************************************************************/
+/*
+Generated MULD_offset_offset_double
+*/
+INSTR_T create_I_MULD_offset_offset_double_instr(const int a, const int b) {
+    instruction_t *i = calloc(1, sizeof(instruction_t));
+
+    i->type = I_MULD_offset_offset_double;
+    ZVAL_INIT_DOUBLE(i->first, a);
+    ZVAL_INIT_DOUBLE(i->second, b);
+
+    return i;
+}
+/********************************************************************************/
+/*
+Generated MULD_offset_offset_offset
+*/
+INSTR_T create_I_MULD_offset_offset_offset_instr(const int a, const int b) {
+    instruction_t *i = calloc(1, sizeof(instruction_t));
+
+    i->type = I_MULD_offset_offset_offset;
+    ZVAL_INIT_DOUBLE(i->first, a);
+    ZVAL_INIT_DOUBLE(i->second, b);
 
     return i;
 }
@@ -465,12 +686,12 @@ INSTR_T create_I_DIVI_offset_int_instr(const int a, const int b) {
 }
 /********************************************************************************/
 /*
-Generated DIVI_offset
+Generated DIVI_offset_offset
 */
-INSTR_T create_I_DIVI_offset_instr(const int a, const int b) {
+INSTR_T create_I_DIVI_offset_offset_instr(const int a, const int b) {
     instruction_t *i = calloc(1, sizeof(instruction_t));
 
-    i->type = I_DIVI_offset;
+    i->type = I_DIVI_offset_offset;
     ZVAL_INIT_INT(i->first, a);
     ZVAL_INIT_INT(i->second, b);
 
@@ -478,14 +699,53 @@ INSTR_T create_I_DIVI_offset_instr(const int a, const int b) {
 }
 /********************************************************************************/
 /*
-Generated DIVD_double
+Generated DIVI_offset_int_int
 */
-INSTR_T create_I_DIVD_double_instr(const int a, const int b) {
+INSTR_T create_I_DIVI_offset_int_int_instr(const int a, const int b) {
     instruction_t *i = calloc(1, sizeof(instruction_t));
 
-    i->type = I_DIVD_double;
-    ZVAL_INIT_DOUBLE(i->first, a);
-    ZVAL_INIT_DOUBLE(i->second, b);
+    i->type = I_DIVI_offset_int_int;
+    ZVAL_INIT_INT(i->first, a);
+    ZVAL_INIT_INT(i->second, b);
+
+    return i;
+}
+/********************************************************************************/
+/*
+Generated DIVI_offset_int_offset
+*/
+INSTR_T create_I_DIVI_offset_int_offset_instr(const int a, const int b) {
+    instruction_t *i = calloc(1, sizeof(instruction_t));
+
+    i->type = I_DIVI_offset_int_offset;
+    ZVAL_INIT_INT(i->first, a);
+    ZVAL_INIT_INT(i->second, b);
+
+    return i;
+}
+/********************************************************************************/
+/*
+Generated DIVI_offset_offset_int
+*/
+INSTR_T create_I_DIVI_offset_offset_int_instr(const int a, const int b) {
+    instruction_t *i = calloc(1, sizeof(instruction_t));
+
+    i->type = I_DIVI_offset_offset_int;
+    ZVAL_INIT_INT(i->first, a);
+    ZVAL_INIT_INT(i->second, b);
+
+    return i;
+}
+/********************************************************************************/
+/*
+Generated DIVI_offset_offset_offset
+*/
+INSTR_T create_I_DIVI_offset_offset_offset_instr(const int a, const int b) {
+    instruction_t *i = calloc(1, sizeof(instruction_t));
+
+    i->type = I_DIVI_offset_offset_offset;
+    ZVAL_INIT_INT(i->first, a);
+    ZVAL_INIT_INT(i->second, b);
 
     return i;
 }
@@ -530,12 +790,12 @@ INSTR_T create_I_DIVD_offset_double_instr(const int a, const int b) {
 }
 /********************************************************************************/
 /*
-Generated DIVD_offset
+Generated DIVD_offset_offset
 */
-INSTR_T create_I_DIVD_offset_instr(const int a, const int b) {
+INSTR_T create_I_DIVD_offset_offset_instr(const int a, const int b) {
     instruction_t *i = calloc(1, sizeof(instruction_t));
 
-    i->type = I_DIVD_offset;
+    i->type = I_DIVD_offset_offset;
     ZVAL_INIT_DOUBLE(i->first, a);
     ZVAL_INIT_DOUBLE(i->second, b);
 
@@ -543,14 +803,53 @@ INSTR_T create_I_DIVD_offset_instr(const int a, const int b) {
 }
 /********************************************************************************/
 /*
-Generated CMPLI_int
+Generated DIVD_offset_double_double
 */
-INSTR_T create_I_CMPLI_int_instr(const int a, const int b) {
+INSTR_T create_I_DIVD_offset_double_double_instr(const int a, const int b) {
     instruction_t *i = calloc(1, sizeof(instruction_t));
 
-    i->type = I_CMPLI_int;
-    ZVAL_INIT_INT(i->first, a);
-    ZVAL_INIT_INT(i->second, b);
+    i->type = I_DIVD_offset_double_double;
+    ZVAL_INIT_DOUBLE(i->first, a);
+    ZVAL_INIT_DOUBLE(i->second, b);
+
+    return i;
+}
+/********************************************************************************/
+/*
+Generated DIVD_offset_double_offset
+*/
+INSTR_T create_I_DIVD_offset_double_offset_instr(const int a, const int b) {
+    instruction_t *i = calloc(1, sizeof(instruction_t));
+
+    i->type = I_DIVD_offset_double_offset;
+    ZVAL_INIT_DOUBLE(i->first, a);
+    ZVAL_INIT_DOUBLE(i->second, b);
+
+    return i;
+}
+/********************************************************************************/
+/*
+Generated DIVD_offset_offset_double
+*/
+INSTR_T create_I_DIVD_offset_offset_double_instr(const int a, const int b) {
+    instruction_t *i = calloc(1, sizeof(instruction_t));
+
+    i->type = I_DIVD_offset_offset_double;
+    ZVAL_INIT_DOUBLE(i->first, a);
+    ZVAL_INIT_DOUBLE(i->second, b);
+
+    return i;
+}
+/********************************************************************************/
+/*
+Generated DIVD_offset_offset_offset
+*/
+INSTR_T create_I_DIVD_offset_offset_offset_instr(const int a, const int b) {
+    instruction_t *i = calloc(1, sizeof(instruction_t));
+
+    i->type = I_DIVD_offset_offset_offset;
+    ZVAL_INIT_DOUBLE(i->first, a);
+    ZVAL_INIT_DOUBLE(i->second, b);
 
     return i;
 }
@@ -595,12 +894,12 @@ INSTR_T create_I_CMPLI_offset_int_instr(const int a, const int b) {
 }
 /********************************************************************************/
 /*
-Generated CMPLI_offset
+Generated CMPLI_offset_offset
 */
-INSTR_T create_I_CMPLI_offset_instr(const int a, const int b) {
+INSTR_T create_I_CMPLI_offset_offset_instr(const int a, const int b) {
     instruction_t *i = calloc(1, sizeof(instruction_t));
 
-    i->type = I_CMPLI_offset;
+    i->type = I_CMPLI_offset_offset;
     ZVAL_INIT_INT(i->first, a);
     ZVAL_INIT_INT(i->second, b);
 
@@ -608,14 +907,53 @@ INSTR_T create_I_CMPLI_offset_instr(const int a, const int b) {
 }
 /********************************************************************************/
 /*
-Generated CMPLD_double
+Generated CMPLI_offset_int_int
 */
-INSTR_T create_I_CMPLD_double_instr(const int a, const int b) {
+INSTR_T create_I_CMPLI_offset_int_int_instr(const int a, const int b) {
     instruction_t *i = calloc(1, sizeof(instruction_t));
 
-    i->type = I_CMPLD_double;
-    ZVAL_INIT_DOUBLE(i->first, a);
-    ZVAL_INIT_DOUBLE(i->second, b);
+    i->type = I_CMPLI_offset_int_int;
+    ZVAL_INIT_INT(i->first, a);
+    ZVAL_INIT_INT(i->second, b);
+
+    return i;
+}
+/********************************************************************************/
+/*
+Generated CMPLI_offset_int_offset
+*/
+INSTR_T create_I_CMPLI_offset_int_offset_instr(const int a, const int b) {
+    instruction_t *i = calloc(1, sizeof(instruction_t));
+
+    i->type = I_CMPLI_offset_int_offset;
+    ZVAL_INIT_INT(i->first, a);
+    ZVAL_INIT_INT(i->second, b);
+
+    return i;
+}
+/********************************************************************************/
+/*
+Generated CMPLI_offset_offset_int
+*/
+INSTR_T create_I_CMPLI_offset_offset_int_instr(const int a, const int b) {
+    instruction_t *i = calloc(1, sizeof(instruction_t));
+
+    i->type = I_CMPLI_offset_offset_int;
+    ZVAL_INIT_INT(i->first, a);
+    ZVAL_INIT_INT(i->second, b);
+
+    return i;
+}
+/********************************************************************************/
+/*
+Generated CMPLI_offset_offset_offset
+*/
+INSTR_T create_I_CMPLI_offset_offset_offset_instr(const int a, const int b) {
+    instruction_t *i = calloc(1, sizeof(instruction_t));
+
+    i->type = I_CMPLI_offset_offset_offset;
+    ZVAL_INIT_INT(i->first, a);
+    ZVAL_INIT_INT(i->second, b);
 
     return i;
 }
@@ -660,12 +998,12 @@ INSTR_T create_I_CMPLD_offset_double_instr(const int a, const int b) {
 }
 /********************************************************************************/
 /*
-Generated CMPLD_offset
+Generated CMPLD_offset_offset
 */
-INSTR_T create_I_CMPLD_offset_instr(const int a, const int b) {
+INSTR_T create_I_CMPLD_offset_offset_instr(const int a, const int b) {
     instruction_t *i = calloc(1, sizeof(instruction_t));
 
-    i->type = I_CMPLD_offset;
+    i->type = I_CMPLD_offset_offset;
     ZVAL_INIT_DOUBLE(i->first, a);
     ZVAL_INIT_DOUBLE(i->second, b);
 
@@ -673,14 +1011,53 @@ INSTR_T create_I_CMPLD_offset_instr(const int a, const int b) {
 }
 /********************************************************************************/
 /*
-Generated CMPMI_int
+Generated CMPLD_offset_double_double
 */
-INSTR_T create_I_CMPMI_int_instr(const int a, const int b) {
+INSTR_T create_I_CMPLD_offset_double_double_instr(const int a, const int b) {
     instruction_t *i = calloc(1, sizeof(instruction_t));
 
-    i->type = I_CMPMI_int;
-    ZVAL_INIT_INT(i->first, a);
-    ZVAL_INIT_INT(i->second, b);
+    i->type = I_CMPLD_offset_double_double;
+    ZVAL_INIT_DOUBLE(i->first, a);
+    ZVAL_INIT_DOUBLE(i->second, b);
+
+    return i;
+}
+/********************************************************************************/
+/*
+Generated CMPLD_offset_double_offset
+*/
+INSTR_T create_I_CMPLD_offset_double_offset_instr(const int a, const int b) {
+    instruction_t *i = calloc(1, sizeof(instruction_t));
+
+    i->type = I_CMPLD_offset_double_offset;
+    ZVAL_INIT_DOUBLE(i->first, a);
+    ZVAL_INIT_DOUBLE(i->second, b);
+
+    return i;
+}
+/********************************************************************************/
+/*
+Generated CMPLD_offset_offset_double
+*/
+INSTR_T create_I_CMPLD_offset_offset_double_instr(const int a, const int b) {
+    instruction_t *i = calloc(1, sizeof(instruction_t));
+
+    i->type = I_CMPLD_offset_offset_double;
+    ZVAL_INIT_DOUBLE(i->first, a);
+    ZVAL_INIT_DOUBLE(i->second, b);
+
+    return i;
+}
+/********************************************************************************/
+/*
+Generated CMPLD_offset_offset_offset
+*/
+INSTR_T create_I_CMPLD_offset_offset_offset_instr(const int a, const int b) {
+    instruction_t *i = calloc(1, sizeof(instruction_t));
+
+    i->type = I_CMPLD_offset_offset_offset;
+    ZVAL_INIT_DOUBLE(i->first, a);
+    ZVAL_INIT_DOUBLE(i->second, b);
 
     return i;
 }
@@ -725,12 +1102,12 @@ INSTR_T create_I_CMPMI_offset_int_instr(const int a, const int b) {
 }
 /********************************************************************************/
 /*
-Generated CMPMI_offset
+Generated CMPMI_offset_offset
 */
-INSTR_T create_I_CMPMI_offset_instr(const int a, const int b) {
+INSTR_T create_I_CMPMI_offset_offset_instr(const int a, const int b) {
     instruction_t *i = calloc(1, sizeof(instruction_t));
 
-    i->type = I_CMPMI_offset;
+    i->type = I_CMPMI_offset_offset;
     ZVAL_INIT_INT(i->first, a);
     ZVAL_INIT_INT(i->second, b);
 
@@ -738,14 +1115,53 @@ INSTR_T create_I_CMPMI_offset_instr(const int a, const int b) {
 }
 /********************************************************************************/
 /*
-Generated CMPMD_double
+Generated CMPMI_offset_int_int
 */
-INSTR_T create_I_CMPMD_double_instr(const int a, const int b) {
+INSTR_T create_I_CMPMI_offset_int_int_instr(const int a, const int b) {
     instruction_t *i = calloc(1, sizeof(instruction_t));
 
-    i->type = I_CMPMD_double;
-    ZVAL_INIT_DOUBLE(i->first, a);
-    ZVAL_INIT_DOUBLE(i->second, b);
+    i->type = I_CMPMI_offset_int_int;
+    ZVAL_INIT_INT(i->first, a);
+    ZVAL_INIT_INT(i->second, b);
+
+    return i;
+}
+/********************************************************************************/
+/*
+Generated CMPMI_offset_int_offset
+*/
+INSTR_T create_I_CMPMI_offset_int_offset_instr(const int a, const int b) {
+    instruction_t *i = calloc(1, sizeof(instruction_t));
+
+    i->type = I_CMPMI_offset_int_offset;
+    ZVAL_INIT_INT(i->first, a);
+    ZVAL_INIT_INT(i->second, b);
+
+    return i;
+}
+/********************************************************************************/
+/*
+Generated CMPMI_offset_offset_int
+*/
+INSTR_T create_I_CMPMI_offset_offset_int_instr(const int a, const int b) {
+    instruction_t *i = calloc(1, sizeof(instruction_t));
+
+    i->type = I_CMPMI_offset_offset_int;
+    ZVAL_INIT_INT(i->first, a);
+    ZVAL_INIT_INT(i->second, b);
+
+    return i;
+}
+/********************************************************************************/
+/*
+Generated CMPMI_offset_offset_offset
+*/
+INSTR_T create_I_CMPMI_offset_offset_offset_instr(const int a, const int b) {
+    instruction_t *i = calloc(1, sizeof(instruction_t));
+
+    i->type = I_CMPMI_offset_offset_offset;
+    ZVAL_INIT_INT(i->first, a);
+    ZVAL_INIT_INT(i->second, b);
 
     return i;
 }
@@ -790,12 +1206,12 @@ INSTR_T create_I_CMPMD_offset_double_instr(const int a, const int b) {
 }
 /********************************************************************************/
 /*
-Generated CMPMD_offset
+Generated CMPMD_offset_offset
 */
-INSTR_T create_I_CMPMD_offset_instr(const int a, const int b) {
+INSTR_T create_I_CMPMD_offset_offset_instr(const int a, const int b) {
     instruction_t *i = calloc(1, sizeof(instruction_t));
 
-    i->type = I_CMPMD_offset;
+    i->type = I_CMPMD_offset_offset;
     ZVAL_INIT_DOUBLE(i->first, a);
     ZVAL_INIT_DOUBLE(i->second, b);
 
@@ -803,14 +1219,53 @@ INSTR_T create_I_CMPMD_offset_instr(const int a, const int b) {
 }
 /********************************************************************************/
 /*
-Generated CMPLEI_int
+Generated CMPMD_offset_double_double
 */
-INSTR_T create_I_CMPLEI_int_instr(const int a, const int b) {
+INSTR_T create_I_CMPMD_offset_double_double_instr(const int a, const int b) {
     instruction_t *i = calloc(1, sizeof(instruction_t));
 
-    i->type = I_CMPLEI_int;
-    ZVAL_INIT_INT(i->first, a);
-    ZVAL_INIT_INT(i->second, b);
+    i->type = I_CMPMD_offset_double_double;
+    ZVAL_INIT_DOUBLE(i->first, a);
+    ZVAL_INIT_DOUBLE(i->second, b);
+
+    return i;
+}
+/********************************************************************************/
+/*
+Generated CMPMD_offset_double_offset
+*/
+INSTR_T create_I_CMPMD_offset_double_offset_instr(const int a, const int b) {
+    instruction_t *i = calloc(1, sizeof(instruction_t));
+
+    i->type = I_CMPMD_offset_double_offset;
+    ZVAL_INIT_DOUBLE(i->first, a);
+    ZVAL_INIT_DOUBLE(i->second, b);
+
+    return i;
+}
+/********************************************************************************/
+/*
+Generated CMPMD_offset_offset_double
+*/
+INSTR_T create_I_CMPMD_offset_offset_double_instr(const int a, const int b) {
+    instruction_t *i = calloc(1, sizeof(instruction_t));
+
+    i->type = I_CMPMD_offset_offset_double;
+    ZVAL_INIT_DOUBLE(i->first, a);
+    ZVAL_INIT_DOUBLE(i->second, b);
+
+    return i;
+}
+/********************************************************************************/
+/*
+Generated CMPMD_offset_offset_offset
+*/
+INSTR_T create_I_CMPMD_offset_offset_offset_instr(const int a, const int b) {
+    instruction_t *i = calloc(1, sizeof(instruction_t));
+
+    i->type = I_CMPMD_offset_offset_offset;
+    ZVAL_INIT_DOUBLE(i->first, a);
+    ZVAL_INIT_DOUBLE(i->second, b);
 
     return i;
 }
@@ -855,12 +1310,12 @@ INSTR_T create_I_CMPLEI_offset_int_instr(const int a, const int b) {
 }
 /********************************************************************************/
 /*
-Generated CMPLEI_offset
+Generated CMPLEI_offset_offset
 */
-INSTR_T create_I_CMPLEI_offset_instr(const int a, const int b) {
+INSTR_T create_I_CMPLEI_offset_offset_instr(const int a, const int b) {
     instruction_t *i = calloc(1, sizeof(instruction_t));
 
-    i->type = I_CMPLEI_offset;
+    i->type = I_CMPLEI_offset_offset;
     ZVAL_INIT_INT(i->first, a);
     ZVAL_INIT_INT(i->second, b);
 
@@ -868,14 +1323,53 @@ INSTR_T create_I_CMPLEI_offset_instr(const int a, const int b) {
 }
 /********************************************************************************/
 /*
-Generated CMPLED_double
+Generated CMPLEI_offset_int_int
 */
-INSTR_T create_I_CMPLED_double_instr(const int a, const int b) {
+INSTR_T create_I_CMPLEI_offset_int_int_instr(const int a, const int b) {
     instruction_t *i = calloc(1, sizeof(instruction_t));
 
-    i->type = I_CMPLED_double;
-    ZVAL_INIT_DOUBLE(i->first, a);
-    ZVAL_INIT_DOUBLE(i->second, b);
+    i->type = I_CMPLEI_offset_int_int;
+    ZVAL_INIT_INT(i->first, a);
+    ZVAL_INIT_INT(i->second, b);
+
+    return i;
+}
+/********************************************************************************/
+/*
+Generated CMPLEI_offset_int_offset
+*/
+INSTR_T create_I_CMPLEI_offset_int_offset_instr(const int a, const int b) {
+    instruction_t *i = calloc(1, sizeof(instruction_t));
+
+    i->type = I_CMPLEI_offset_int_offset;
+    ZVAL_INIT_INT(i->first, a);
+    ZVAL_INIT_INT(i->second, b);
+
+    return i;
+}
+/********************************************************************************/
+/*
+Generated CMPLEI_offset_offset_int
+*/
+INSTR_T create_I_CMPLEI_offset_offset_int_instr(const int a, const int b) {
+    instruction_t *i = calloc(1, sizeof(instruction_t));
+
+    i->type = I_CMPLEI_offset_offset_int;
+    ZVAL_INIT_INT(i->first, a);
+    ZVAL_INIT_INT(i->second, b);
+
+    return i;
+}
+/********************************************************************************/
+/*
+Generated CMPLEI_offset_offset_offset
+*/
+INSTR_T create_I_CMPLEI_offset_offset_offset_instr(const int a, const int b) {
+    instruction_t *i = calloc(1, sizeof(instruction_t));
+
+    i->type = I_CMPLEI_offset_offset_offset;
+    ZVAL_INIT_INT(i->first, a);
+    ZVAL_INIT_INT(i->second, b);
 
     return i;
 }
@@ -920,12 +1414,12 @@ INSTR_T create_I_CMPLED_offset_double_instr(const int a, const int b) {
 }
 /********************************************************************************/
 /*
-Generated CMPLED_offset
+Generated CMPLED_offset_offset
 */
-INSTR_T create_I_CMPLED_offset_instr(const int a, const int b) {
+INSTR_T create_I_CMPLED_offset_offset_instr(const int a, const int b) {
     instruction_t *i = calloc(1, sizeof(instruction_t));
 
-    i->type = I_CMPLED_offset;
+    i->type = I_CMPLED_offset_offset;
     ZVAL_INIT_DOUBLE(i->first, a);
     ZVAL_INIT_DOUBLE(i->second, b);
 
@@ -933,14 +1427,53 @@ INSTR_T create_I_CMPLED_offset_instr(const int a, const int b) {
 }
 /********************************************************************************/
 /*
-Generated CMPMEI_int
+Generated CMPLED_offset_double_double
 */
-INSTR_T create_I_CMPMEI_int_instr(const int a, const int b) {
+INSTR_T create_I_CMPLED_offset_double_double_instr(const int a, const int b) {
     instruction_t *i = calloc(1, sizeof(instruction_t));
 
-    i->type = I_CMPMEI_int;
-    ZVAL_INIT_INT(i->first, a);
-    ZVAL_INIT_INT(i->second, b);
+    i->type = I_CMPLED_offset_double_double;
+    ZVAL_INIT_DOUBLE(i->first, a);
+    ZVAL_INIT_DOUBLE(i->second, b);
+
+    return i;
+}
+/********************************************************************************/
+/*
+Generated CMPLED_offset_double_offset
+*/
+INSTR_T create_I_CMPLED_offset_double_offset_instr(const int a, const int b) {
+    instruction_t *i = calloc(1, sizeof(instruction_t));
+
+    i->type = I_CMPLED_offset_double_offset;
+    ZVAL_INIT_DOUBLE(i->first, a);
+    ZVAL_INIT_DOUBLE(i->second, b);
+
+    return i;
+}
+/********************************************************************************/
+/*
+Generated CMPLED_offset_offset_double
+*/
+INSTR_T create_I_CMPLED_offset_offset_double_instr(const int a, const int b) {
+    instruction_t *i = calloc(1, sizeof(instruction_t));
+
+    i->type = I_CMPLED_offset_offset_double;
+    ZVAL_INIT_DOUBLE(i->first, a);
+    ZVAL_INIT_DOUBLE(i->second, b);
+
+    return i;
+}
+/********************************************************************************/
+/*
+Generated CMPLED_offset_offset_offset
+*/
+INSTR_T create_I_CMPLED_offset_offset_offset_instr(const int a, const int b) {
+    instruction_t *i = calloc(1, sizeof(instruction_t));
+
+    i->type = I_CMPLED_offset_offset_offset;
+    ZVAL_INIT_DOUBLE(i->first, a);
+    ZVAL_INIT_DOUBLE(i->second, b);
 
     return i;
 }
@@ -985,12 +1518,12 @@ INSTR_T create_I_CMPMEI_offset_int_instr(const int a, const int b) {
 }
 /********************************************************************************/
 /*
-Generated CMPMEI_offset
+Generated CMPMEI_offset_offset
 */
-INSTR_T create_I_CMPMEI_offset_instr(const int a, const int b) {
+INSTR_T create_I_CMPMEI_offset_offset_instr(const int a, const int b) {
     instruction_t *i = calloc(1, sizeof(instruction_t));
 
-    i->type = I_CMPMEI_offset;
+    i->type = I_CMPMEI_offset_offset;
     ZVAL_INIT_INT(i->first, a);
     ZVAL_INIT_INT(i->second, b);
 
@@ -998,14 +1531,53 @@ INSTR_T create_I_CMPMEI_offset_instr(const int a, const int b) {
 }
 /********************************************************************************/
 /*
-Generated CMPMED_double
+Generated CMPMEI_offset_int_int
 */
-INSTR_T create_I_CMPMED_double_instr(const int a, const int b) {
+INSTR_T create_I_CMPMEI_offset_int_int_instr(const int a, const int b) {
     instruction_t *i = calloc(1, sizeof(instruction_t));
 
-    i->type = I_CMPMED_double;
-    ZVAL_INIT_DOUBLE(i->first, a);
-    ZVAL_INIT_DOUBLE(i->second, b);
+    i->type = I_CMPMEI_offset_int_int;
+    ZVAL_INIT_INT(i->first, a);
+    ZVAL_INIT_INT(i->second, b);
+
+    return i;
+}
+/********************************************************************************/
+/*
+Generated CMPMEI_offset_int_offset
+*/
+INSTR_T create_I_CMPMEI_offset_int_offset_instr(const int a, const int b) {
+    instruction_t *i = calloc(1, sizeof(instruction_t));
+
+    i->type = I_CMPMEI_offset_int_offset;
+    ZVAL_INIT_INT(i->first, a);
+    ZVAL_INIT_INT(i->second, b);
+
+    return i;
+}
+/********************************************************************************/
+/*
+Generated CMPMEI_offset_offset_int
+*/
+INSTR_T create_I_CMPMEI_offset_offset_int_instr(const int a, const int b) {
+    instruction_t *i = calloc(1, sizeof(instruction_t));
+
+    i->type = I_CMPMEI_offset_offset_int;
+    ZVAL_INIT_INT(i->first, a);
+    ZVAL_INIT_INT(i->second, b);
+
+    return i;
+}
+/********************************************************************************/
+/*
+Generated CMPMEI_offset_offset_offset
+*/
+INSTR_T create_I_CMPMEI_offset_offset_offset_instr(const int a, const int b) {
+    instruction_t *i = calloc(1, sizeof(instruction_t));
+
+    i->type = I_CMPMEI_offset_offset_offset;
+    ZVAL_INIT_INT(i->first, a);
+    ZVAL_INIT_INT(i->second, b);
 
     return i;
 }
@@ -1050,12 +1622,12 @@ INSTR_T create_I_CMPMED_offset_double_instr(const int a, const int b) {
 }
 /********************************************************************************/
 /*
-Generated CMPMED_offset
+Generated CMPMED_offset_offset
 */
-INSTR_T create_I_CMPMED_offset_instr(const int a, const int b) {
+INSTR_T create_I_CMPMED_offset_offset_instr(const int a, const int b) {
     instruction_t *i = calloc(1, sizeof(instruction_t));
 
-    i->type = I_CMPMED_offset;
+    i->type = I_CMPMED_offset_offset;
     ZVAL_INIT_DOUBLE(i->first, a);
     ZVAL_INIT_DOUBLE(i->second, b);
 
@@ -1063,14 +1635,53 @@ INSTR_T create_I_CMPMED_offset_instr(const int a, const int b) {
 }
 /********************************************************************************/
 /*
-Generated CMPEI_int
+Generated CMPMED_offset_double_double
 */
-INSTR_T create_I_CMPEI_int_instr(const int a, const int b) {
+INSTR_T create_I_CMPMED_offset_double_double_instr(const int a, const int b) {
     instruction_t *i = calloc(1, sizeof(instruction_t));
 
-    i->type = I_CMPEI_int;
-    ZVAL_INIT_INT(i->first, a);
-    ZVAL_INIT_INT(i->second, b);
+    i->type = I_CMPMED_offset_double_double;
+    ZVAL_INIT_DOUBLE(i->first, a);
+    ZVAL_INIT_DOUBLE(i->second, b);
+
+    return i;
+}
+/********************************************************************************/
+/*
+Generated CMPMED_offset_double_offset
+*/
+INSTR_T create_I_CMPMED_offset_double_offset_instr(const int a, const int b) {
+    instruction_t *i = calloc(1, sizeof(instruction_t));
+
+    i->type = I_CMPMED_offset_double_offset;
+    ZVAL_INIT_DOUBLE(i->first, a);
+    ZVAL_INIT_DOUBLE(i->second, b);
+
+    return i;
+}
+/********************************************************************************/
+/*
+Generated CMPMED_offset_offset_double
+*/
+INSTR_T create_I_CMPMED_offset_offset_double_instr(const int a, const int b) {
+    instruction_t *i = calloc(1, sizeof(instruction_t));
+
+    i->type = I_CMPMED_offset_offset_double;
+    ZVAL_INIT_DOUBLE(i->first, a);
+    ZVAL_INIT_DOUBLE(i->second, b);
+
+    return i;
+}
+/********************************************************************************/
+/*
+Generated CMPMED_offset_offset_offset
+*/
+INSTR_T create_I_CMPMED_offset_offset_offset_instr(const int a, const int b) {
+    instruction_t *i = calloc(1, sizeof(instruction_t));
+
+    i->type = I_CMPMED_offset_offset_offset;
+    ZVAL_INIT_DOUBLE(i->first, a);
+    ZVAL_INIT_DOUBLE(i->second, b);
 
     return i;
 }
@@ -1115,12 +1726,12 @@ INSTR_T create_I_CMPEI_offset_int_instr(const int a, const int b) {
 }
 /********************************************************************************/
 /*
-Generated CMPEI_offset
+Generated CMPEI_offset_offset
 */
-INSTR_T create_I_CMPEI_offset_instr(const int a, const int b) {
+INSTR_T create_I_CMPEI_offset_offset_instr(const int a, const int b) {
     instruction_t *i = calloc(1, sizeof(instruction_t));
 
-    i->type = I_CMPEI_offset;
+    i->type = I_CMPEI_offset_offset;
     ZVAL_INIT_INT(i->first, a);
     ZVAL_INIT_INT(i->second, b);
 
@@ -1128,14 +1739,53 @@ INSTR_T create_I_CMPEI_offset_instr(const int a, const int b) {
 }
 /********************************************************************************/
 /*
-Generated CMPED_double
+Generated CMPEI_offset_int_int
 */
-INSTR_T create_I_CMPED_double_instr(const int a, const int b) {
+INSTR_T create_I_CMPEI_offset_int_int_instr(const int a, const int b) {
     instruction_t *i = calloc(1, sizeof(instruction_t));
 
-    i->type = I_CMPED_double;
-    ZVAL_INIT_DOUBLE(i->first, a);
-    ZVAL_INIT_DOUBLE(i->second, b);
+    i->type = I_CMPEI_offset_int_int;
+    ZVAL_INIT_INT(i->first, a);
+    ZVAL_INIT_INT(i->second, b);
+
+    return i;
+}
+/********************************************************************************/
+/*
+Generated CMPEI_offset_int_offset
+*/
+INSTR_T create_I_CMPEI_offset_int_offset_instr(const int a, const int b) {
+    instruction_t *i = calloc(1, sizeof(instruction_t));
+
+    i->type = I_CMPEI_offset_int_offset;
+    ZVAL_INIT_INT(i->first, a);
+    ZVAL_INIT_INT(i->second, b);
+
+    return i;
+}
+/********************************************************************************/
+/*
+Generated CMPEI_offset_offset_int
+*/
+INSTR_T create_I_CMPEI_offset_offset_int_instr(const int a, const int b) {
+    instruction_t *i = calloc(1, sizeof(instruction_t));
+
+    i->type = I_CMPEI_offset_offset_int;
+    ZVAL_INIT_INT(i->first, a);
+    ZVAL_INIT_INT(i->second, b);
+
+    return i;
+}
+/********************************************************************************/
+/*
+Generated CMPEI_offset_offset_offset
+*/
+INSTR_T create_I_CMPEI_offset_offset_offset_instr(const int a, const int b) {
+    instruction_t *i = calloc(1, sizeof(instruction_t));
+
+    i->type = I_CMPEI_offset_offset_offset;
+    ZVAL_INIT_INT(i->first, a);
+    ZVAL_INIT_INT(i->second, b);
 
     return i;
 }
@@ -1180,12 +1830,12 @@ INSTR_T create_I_CMPED_offset_double_instr(const int a, const int b) {
 }
 /********************************************************************************/
 /*
-Generated CMPED_offset
+Generated CMPED_offset_offset
 */
-INSTR_T create_I_CMPED_offset_instr(const int a, const int b) {
+INSTR_T create_I_CMPED_offset_offset_instr(const int a, const int b) {
     instruction_t *i = calloc(1, sizeof(instruction_t));
 
-    i->type = I_CMPED_offset;
+    i->type = I_CMPED_offset_offset;
     ZVAL_INIT_DOUBLE(i->first, a);
     ZVAL_INIT_DOUBLE(i->second, b);
 
@@ -1193,14 +1843,53 @@ INSTR_T create_I_CMPED_offset_instr(const int a, const int b) {
 }
 /********************************************************************************/
 /*
-Generated CMPNEI_int
+Generated CMPED_offset_double_double
 */
-INSTR_T create_I_CMPNEI_int_instr(const int a, const int b) {
+INSTR_T create_I_CMPED_offset_double_double_instr(const int a, const int b) {
     instruction_t *i = calloc(1, sizeof(instruction_t));
 
-    i->type = I_CMPNEI_int;
-    ZVAL_INIT_INT(i->first, a);
-    ZVAL_INIT_INT(i->second, b);
+    i->type = I_CMPED_offset_double_double;
+    ZVAL_INIT_DOUBLE(i->first, a);
+    ZVAL_INIT_DOUBLE(i->second, b);
+
+    return i;
+}
+/********************************************************************************/
+/*
+Generated CMPED_offset_double_offset
+*/
+INSTR_T create_I_CMPED_offset_double_offset_instr(const int a, const int b) {
+    instruction_t *i = calloc(1, sizeof(instruction_t));
+
+    i->type = I_CMPED_offset_double_offset;
+    ZVAL_INIT_DOUBLE(i->first, a);
+    ZVAL_INIT_DOUBLE(i->second, b);
+
+    return i;
+}
+/********************************************************************************/
+/*
+Generated CMPED_offset_offset_double
+*/
+INSTR_T create_I_CMPED_offset_offset_double_instr(const int a, const int b) {
+    instruction_t *i = calloc(1, sizeof(instruction_t));
+
+    i->type = I_CMPED_offset_offset_double;
+    ZVAL_INIT_DOUBLE(i->first, a);
+    ZVAL_INIT_DOUBLE(i->second, b);
+
+    return i;
+}
+/********************************************************************************/
+/*
+Generated CMPED_offset_offset_offset
+*/
+INSTR_T create_I_CMPED_offset_offset_offset_instr(const int a, const int b) {
+    instruction_t *i = calloc(1, sizeof(instruction_t));
+
+    i->type = I_CMPED_offset_offset_offset;
+    ZVAL_INIT_DOUBLE(i->first, a);
+    ZVAL_INIT_DOUBLE(i->second, b);
 
     return i;
 }
@@ -1245,12 +1934,12 @@ INSTR_T create_I_CMPNEI_offset_int_instr(const int a, const int b) {
 }
 /********************************************************************************/
 /*
-Generated CMPNEI_offset
+Generated CMPNEI_offset_offset
 */
-INSTR_T create_I_CMPNEI_offset_instr(const int a, const int b) {
+INSTR_T create_I_CMPNEI_offset_offset_instr(const int a, const int b) {
     instruction_t *i = calloc(1, sizeof(instruction_t));
 
-    i->type = I_CMPNEI_offset;
+    i->type = I_CMPNEI_offset_offset;
     ZVAL_INIT_INT(i->first, a);
     ZVAL_INIT_INT(i->second, b);
 
@@ -1258,14 +1947,53 @@ INSTR_T create_I_CMPNEI_offset_instr(const int a, const int b) {
 }
 /********************************************************************************/
 /*
-Generated CMPNED_double
+Generated CMPNEI_offset_int_int
 */
-INSTR_T create_I_CMPNED_double_instr(const int a, const int b) {
+INSTR_T create_I_CMPNEI_offset_int_int_instr(const int a, const int b) {
     instruction_t *i = calloc(1, sizeof(instruction_t));
 
-    i->type = I_CMPNED_double;
-    ZVAL_INIT_DOUBLE(i->first, a);
-    ZVAL_INIT_DOUBLE(i->second, b);
+    i->type = I_CMPNEI_offset_int_int;
+    ZVAL_INIT_INT(i->first, a);
+    ZVAL_INIT_INT(i->second, b);
+
+    return i;
+}
+/********************************************************************************/
+/*
+Generated CMPNEI_offset_int_offset
+*/
+INSTR_T create_I_CMPNEI_offset_int_offset_instr(const int a, const int b) {
+    instruction_t *i = calloc(1, sizeof(instruction_t));
+
+    i->type = I_CMPNEI_offset_int_offset;
+    ZVAL_INIT_INT(i->first, a);
+    ZVAL_INIT_INT(i->second, b);
+
+    return i;
+}
+/********************************************************************************/
+/*
+Generated CMPNEI_offset_offset_int
+*/
+INSTR_T create_I_CMPNEI_offset_offset_int_instr(const int a, const int b) {
+    instruction_t *i = calloc(1, sizeof(instruction_t));
+
+    i->type = I_CMPNEI_offset_offset_int;
+    ZVAL_INIT_INT(i->first, a);
+    ZVAL_INIT_INT(i->second, b);
+
+    return i;
+}
+/********************************************************************************/
+/*
+Generated CMPNEI_offset_offset_offset
+*/
+INSTR_T create_I_CMPNEI_offset_offset_offset_instr(const int a, const int b) {
+    instruction_t *i = calloc(1, sizeof(instruction_t));
+
+    i->type = I_CMPNEI_offset_offset_offset;
+    ZVAL_INIT_INT(i->first, a);
+    ZVAL_INIT_INT(i->second, b);
 
     return i;
 }
@@ -1310,12 +2038,64 @@ INSTR_T create_I_CMPNED_offset_double_instr(const int a, const int b) {
 }
 /********************************************************************************/
 /*
-Generated CMPNED_offset
+Generated CMPNED_offset_offset
 */
-INSTR_T create_I_CMPNED_offset_instr(const int a, const int b) {
+INSTR_T create_I_CMPNED_offset_offset_instr(const int a, const int b) {
     instruction_t *i = calloc(1, sizeof(instruction_t));
 
-    i->type = I_CMPNED_offset;
+    i->type = I_CMPNED_offset_offset;
+    ZVAL_INIT_DOUBLE(i->first, a);
+    ZVAL_INIT_DOUBLE(i->second, b);
+
+    return i;
+}
+/********************************************************************************/
+/*
+Generated CMPNED_offset_double_double
+*/
+INSTR_T create_I_CMPNED_offset_double_double_instr(const int a, const int b) {
+    instruction_t *i = calloc(1, sizeof(instruction_t));
+
+    i->type = I_CMPNED_offset_double_double;
+    ZVAL_INIT_DOUBLE(i->first, a);
+    ZVAL_INIT_DOUBLE(i->second, b);
+
+    return i;
+}
+/********************************************************************************/
+/*
+Generated CMPNED_offset_double_offset
+*/
+INSTR_T create_I_CMPNED_offset_double_offset_instr(const int a, const int b) {
+    instruction_t *i = calloc(1, sizeof(instruction_t));
+
+    i->type = I_CMPNED_offset_double_offset;
+    ZVAL_INIT_DOUBLE(i->first, a);
+    ZVAL_INIT_DOUBLE(i->second, b);
+
+    return i;
+}
+/********************************************************************************/
+/*
+Generated CMPNED_offset_offset_double
+*/
+INSTR_T create_I_CMPNED_offset_offset_double_instr(const int a, const int b) {
+    instruction_t *i = calloc(1, sizeof(instruction_t));
+
+    i->type = I_CMPNED_offset_offset_double;
+    ZVAL_INIT_DOUBLE(i->first, a);
+    ZVAL_INIT_DOUBLE(i->second, b);
+
+    return i;
+}
+/********************************************************************************/
+/*
+Generated CMPNED_offset_offset_offset
+*/
+INSTR_T create_I_CMPNED_offset_offset_offset_instr(const int a, const int b) {
+    instruction_t *i = calloc(1, sizeof(instruction_t));
+
+    i->type = I_CMPNED_offset_offset_offset;
     ZVAL_INIT_DOUBLE(i->first, a);
     ZVAL_INIT_DOUBLE(i->second, b);
 

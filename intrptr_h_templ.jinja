@@ -1,7 +1,12 @@
-static inline void process_{{ i_name }}_{{ i_type }}instr(struct __stack_t *stack, instruction_t *instr, const int offset)
+
+/*
+Generated {{ inst_name }}_{{ inst_type }}
+*/
+static inline void process_{{ inst_name }}_{{ inst_type }}instr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
-    if (ZVAL_IS_{{ d_type }}(instr->second) && ZVAL_IS_{{ d_type }}(instr->third)) {
-        ZVAL_SET_INT(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_INT(instr->first) - 1), ZVAL_GET_INT(instr->second) + ZVAL_GET_INT(instr->third));
-	else
-		// TODO: proper ERR handling	
+    if (ZVAL_IS_{{ data_type }}(instr->second) && ZVAL_IS_{{ data_type }}(instr->third)) {
+        ZVAL_SET_{{ data_type }}(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_{{ data_type }}(instr->first) - 1), ZVAL_GET_{{ data_type }}(instr->second) {{proc_op}} ZVAL_GET_{{ data_type }}(instr->third));
+	}else
+		return;	
 }
+/********************************************************************************/
