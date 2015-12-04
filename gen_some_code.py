@@ -2,7 +2,6 @@
 #-*- coding: utf-8 -*-
 from jinja2 import Template
 
-
 #### file template for processes generator
 intrptr_templ = Template( open('intrptr_h_templ.jinja', 'r').read() )
 #### file  for instruction generator output
@@ -24,6 +23,11 @@ i_types = ['I', 'D']
 
 ### file template for instruction generator
 instruc_templ = Template( open('instruc_h_templ.jinja', 'r').read() )
+
+header_instr=open('header', "r").read()
+footer_instr="\n#endif // GEN_INSTRUCTIONS_H\n"
+
+f_gen_instruc.write(header_instr)
 
 ## INSTRUCTIONS
 aritm_instructions = [
@@ -53,6 +57,8 @@ for instruction in aritm_instructions:
 					G.append('offset')
 			print instruction[0] + i_type +"_".join(G)
 			f_gen_instruc.write( instruc_templ.render(	i_name = instruction[0] + i_type, data_type = 'INT' if i_type == 'I' else 'DOUBLE', i_op = instruction[1], inst_type = "_".join(G)))
+f_gen_instruc.write(footer_instr)
+
 ###########################################################################################					
 ##################### ARITMETICAL -> END && COMPARE -> END ##############################					
 ###########################################################################################
