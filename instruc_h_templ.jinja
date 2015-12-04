@@ -1,0 +1,9 @@
+INSTR_T create_{{ i_name }}_{{ i_type }}_instr(const int a, const int b) {
+    instruction_t *i = calloc(1, sizeof(instruction_t));
+
+    i->type = I_{{ iname }};
+    ZVAL_INIT_{{ d_type }}(i->first, a);
+    ZVAL_INIT_{{ d_type}}(i->second, b);
+
+    return i;
+}
