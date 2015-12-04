@@ -2,24 +2,44 @@
 #-*- coding: utf-8 -*-
 from jinja2 import Template
 
-instruc_templ = Template( open('instruc_h_templ.jinja', 'r').read() )
 
+#### file template for processes generator
 intrptr_templ = Template( open('intrptr_h_templ.jinja', 'r').read() )
-
+#### file  for instruction generator output
 f_gen_instruc = open("gen_instructions.h", "w")
+#### file for processes generator generator output
 f_gen_intrprt = open("gen_interpr_inst.h", "w")
 
+## process types X is replaced down in fourth for
 p_types = [['X'], ['X', 'X'], ['X', 'offset'], ['offset', 'X'], ['offset']]
+## 
 
+## instruction types
 i_types = ['I', 'D']
 
-instructions = [
+
+############################################################################################					
+###################### ARITMETICAL INSTRUCTIONS GENERATION START ###########################					
+############################################################################################
+
+### file template for instruction generator
+instruc_templ = Template( open('instruc_h_templ.jinja', 'r').read() )
+
+## INSTRUCTIONS
+aritm_instructions = [
 	['ADD', '+'],
 	['SUB', '-'],
 	['MUL', '*'],
-	['DIV', '/']
+	['DIV', '/'],
+	['CMPL','<'],
+	['CMPM','>'],
+	['CMPLE','<='],
+	['CMPME','>='],
+	['CMPE','=='],
+	['CMPNE','!=']
 ]
-for instruction in instructions:
+## @ARITMETICAL INSTRUCTIONS GENERATION
+for instruction in aritm_instructions:
 	for i_type in i_types:
 		for p_type in p_types:
 			G=[] # Prepac janko list nema join
@@ -33,23 +53,11 @@ for instruction in instructions:
 					G.append('offset')
 			print instruction[0] + i_type +"_".join(G)
 			f_gen_instruc.write( instruc_templ.render(	i_name = instruction[0] + i_type, data_type = 'INT' if i_type == 'I' else 'DOUBLE', i_op = instruction[1], inst_type = "_".join(G)))
-					
-						
-					
-			#														    join(pt.replace('X', t2 == 'I' ? 'int' : 'double')))
-			# INSTR_T create_{{ i_name }}_{{ i_type }}_instr(const int a, const int b) {
-#     instruction_t *instruction = calloc(1, sizeof(instruction_t));
+###########################################################################################					
+##################### ARITMETICAL -> END && COMPARE -> END ##############################					
+###########################################################################################
 
-#     instruction->type = I_{{ i_name }};
-#     ZVAL_INIT_{{ d_type }}(instruction->first, a);
-#     ZVAL_INIT_{{ d_type}}(instruction->second, b);
 
-#     return instruction;
-# }
 
 f_gen_instruc.close()
 f_gen_intrprt.close()
-# 	TRUE
-# ('int' if i_type == 'I' 'double' ) obsah =='X'  'offset' for obsah in p_type
-
-
