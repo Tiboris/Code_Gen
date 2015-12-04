@@ -1,8 +1,31 @@
+/**
+ * Copyright (c) 2015, Team Unknown,
+ *                     Ján Mochňak,    <xmochn00@vutbr.cz>
+ *                     Tibor Dudlák,   <xdudla00@vutbr.cz>
+ *                     Dávid Prexta,   <xprext00@vutbr.cz>
+ *                     Martin Krajňák, <xkrajn02@vutbr.cz>
+ *                     Patrik Segedy,  <xseged00@vutbr.cz>
+ * All rights reserved.
+ *
+ * This source code is licensed under the MIT license found in the
+ * license.txt file in the root directory of this source tree.
+ */
+
+#ifndef GEN_PROCESSES_H
+#define GEN_PROCESSES_H
+
+#include <stdlib.h>
+#include <string.h>
+#include "klist.h"
+#include "zval.h"
+#include "expression.h"
+#include "kvec.h"
+
 
 /*
-Generated ADDI_int_int
+Generated I_ADDI_int_int
 */
-static inline void process_ADDI_int_intinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_ADDI_int_intinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_INT(instr->second) && ZVAL_IS_INT(instr->third)) {
         ZVAL_SET_INT(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_INT(instr->first) - 1), ZVAL_GET_INT(instr->second) + ZVAL_GET_INT(instr->third));
@@ -11,9 +34,9 @@ static inline void process_ADDI_int_intinstr(struct __stack_t *stack, instructio
 }
 /********************************************************************************/
 /*
-Generated ADDI_int_offset
+Generated I_ADDI_int_offset
 */
-static inline void process_ADDI_int_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_ADDI_int_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_INT(instr->second) && ZVAL_IS_INT(instr->third)) {
         ZVAL_SET_INT(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_INT(instr->first) - 1), ZVAL_GET_INT(instr->second) + ZVAL_GET_INT(instr->third));
@@ -22,9 +45,9 @@ static inline void process_ADDI_int_offsetinstr(struct __stack_t *stack, instruc
 }
 /********************************************************************************/
 /*
-Generated ADDI_offset_int
+Generated I_ADDI_offset_int
 */
-static inline void process_ADDI_offset_intinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_ADDI_offset_intinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_INT(instr->second) && ZVAL_IS_INT(instr->third)) {
         ZVAL_SET_INT(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_INT(instr->first) - 1), ZVAL_GET_INT(instr->second) + ZVAL_GET_INT(instr->third));
@@ -33,9 +56,9 @@ static inline void process_ADDI_offset_intinstr(struct __stack_t *stack, instruc
 }
 /********************************************************************************/
 /*
-Generated ADDI_offset_offset
+Generated I_ADDI_offset_offset
 */
-static inline void process_ADDI_offset_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_ADDI_offset_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_INT(instr->second) && ZVAL_IS_INT(instr->third)) {
         ZVAL_SET_INT(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_INT(instr->first) - 1), ZVAL_GET_INT(instr->second) + ZVAL_GET_INT(instr->third));
@@ -44,9 +67,9 @@ static inline void process_ADDI_offset_offsetinstr(struct __stack_t *stack, inst
 }
 /********************************************************************************/
 /*
-Generated ADDI_offset_int_int
+Generated I_ADDI_offset_int_int
 */
-static inline void process_ADDI_offset_int_intinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_ADDI_offset_int_intinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_INT(instr->second) && ZVAL_IS_INT(instr->third)) {
         ZVAL_SET_INT(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_INT(instr->first) - 1), ZVAL_GET_INT(instr->second) + ZVAL_GET_INT(instr->third));
@@ -55,9 +78,9 @@ static inline void process_ADDI_offset_int_intinstr(struct __stack_t *stack, ins
 }
 /********************************************************************************/
 /*
-Generated ADDI_offset_int_offset
+Generated I_ADDI_offset_int_offset
 */
-static inline void process_ADDI_offset_int_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_ADDI_offset_int_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_INT(instr->second) && ZVAL_IS_INT(instr->third)) {
         ZVAL_SET_INT(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_INT(instr->first) - 1), ZVAL_GET_INT(instr->second) + ZVAL_GET_INT(instr->third));
@@ -66,9 +89,9 @@ static inline void process_ADDI_offset_int_offsetinstr(struct __stack_t *stack, 
 }
 /********************************************************************************/
 /*
-Generated ADDI_offset_offset_int
+Generated I_ADDI_offset_offset_int
 */
-static inline void process_ADDI_offset_offset_intinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_ADDI_offset_offset_intinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_INT(instr->second) && ZVAL_IS_INT(instr->third)) {
         ZVAL_SET_INT(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_INT(instr->first) - 1), ZVAL_GET_INT(instr->second) + ZVAL_GET_INT(instr->third));
@@ -77,9 +100,9 @@ static inline void process_ADDI_offset_offset_intinstr(struct __stack_t *stack, 
 }
 /********************************************************************************/
 /*
-Generated ADDI_offset_offset_offset
+Generated I_ADDI_offset_offset_offset
 */
-static inline void process_ADDI_offset_offset_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_ADDI_offset_offset_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_INT(instr->second) && ZVAL_IS_INT(instr->third)) {
         ZVAL_SET_INT(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_INT(instr->first) - 1), ZVAL_GET_INT(instr->second) + ZVAL_GET_INT(instr->third));
@@ -88,9 +111,9 @@ static inline void process_ADDI_offset_offset_offsetinstr(struct __stack_t *stac
 }
 /********************************************************************************/
 /*
-Generated ADDD_double_double
+Generated I_ADDD_double_double
 */
-static inline void process_ADDD_double_doubleinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_ADDD_double_doubleinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_DOUBLE(instr->second) && ZVAL_IS_DOUBLE(instr->third)) {
         ZVAL_SET_DOUBLE(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_DOUBLE(instr->first) - 1), ZVAL_GET_DOUBLE(instr->second) + ZVAL_GET_DOUBLE(instr->third));
@@ -99,9 +122,9 @@ static inline void process_ADDD_double_doubleinstr(struct __stack_t *stack, inst
 }
 /********************************************************************************/
 /*
-Generated ADDD_double_offset
+Generated I_ADDD_double_offset
 */
-static inline void process_ADDD_double_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_ADDD_double_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_DOUBLE(instr->second) && ZVAL_IS_DOUBLE(instr->third)) {
         ZVAL_SET_DOUBLE(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_DOUBLE(instr->first) - 1), ZVAL_GET_DOUBLE(instr->second) + ZVAL_GET_DOUBLE(instr->third));
@@ -110,9 +133,9 @@ static inline void process_ADDD_double_offsetinstr(struct __stack_t *stack, inst
 }
 /********************************************************************************/
 /*
-Generated ADDD_offset_double
+Generated I_ADDD_offset_double
 */
-static inline void process_ADDD_offset_doubleinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_ADDD_offset_doubleinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_DOUBLE(instr->second) && ZVAL_IS_DOUBLE(instr->third)) {
         ZVAL_SET_DOUBLE(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_DOUBLE(instr->first) - 1), ZVAL_GET_DOUBLE(instr->second) + ZVAL_GET_DOUBLE(instr->third));
@@ -121,9 +144,9 @@ static inline void process_ADDD_offset_doubleinstr(struct __stack_t *stack, inst
 }
 /********************************************************************************/
 /*
-Generated ADDD_offset_offset
+Generated I_ADDD_offset_offset
 */
-static inline void process_ADDD_offset_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_ADDD_offset_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_DOUBLE(instr->second) && ZVAL_IS_DOUBLE(instr->third)) {
         ZVAL_SET_DOUBLE(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_DOUBLE(instr->first) - 1), ZVAL_GET_DOUBLE(instr->second) + ZVAL_GET_DOUBLE(instr->third));
@@ -132,9 +155,9 @@ static inline void process_ADDD_offset_offsetinstr(struct __stack_t *stack, inst
 }
 /********************************************************************************/
 /*
-Generated ADDD_offset_double_double
+Generated I_ADDD_offset_double_double
 */
-static inline void process_ADDD_offset_double_doubleinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_ADDD_offset_double_doubleinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_DOUBLE(instr->second) && ZVAL_IS_DOUBLE(instr->third)) {
         ZVAL_SET_DOUBLE(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_DOUBLE(instr->first) - 1), ZVAL_GET_DOUBLE(instr->second) + ZVAL_GET_DOUBLE(instr->third));
@@ -143,9 +166,9 @@ static inline void process_ADDD_offset_double_doubleinstr(struct __stack_t *stac
 }
 /********************************************************************************/
 /*
-Generated ADDD_offset_double_offset
+Generated I_ADDD_offset_double_offset
 */
-static inline void process_ADDD_offset_double_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_ADDD_offset_double_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_DOUBLE(instr->second) && ZVAL_IS_DOUBLE(instr->third)) {
         ZVAL_SET_DOUBLE(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_DOUBLE(instr->first) - 1), ZVAL_GET_DOUBLE(instr->second) + ZVAL_GET_DOUBLE(instr->third));
@@ -154,9 +177,9 @@ static inline void process_ADDD_offset_double_offsetinstr(struct __stack_t *stac
 }
 /********************************************************************************/
 /*
-Generated ADDD_offset_offset_double
+Generated I_ADDD_offset_offset_double
 */
-static inline void process_ADDD_offset_offset_doubleinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_ADDD_offset_offset_doubleinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_DOUBLE(instr->second) && ZVAL_IS_DOUBLE(instr->third)) {
         ZVAL_SET_DOUBLE(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_DOUBLE(instr->first) - 1), ZVAL_GET_DOUBLE(instr->second) + ZVAL_GET_DOUBLE(instr->third));
@@ -165,9 +188,9 @@ static inline void process_ADDD_offset_offset_doubleinstr(struct __stack_t *stac
 }
 /********************************************************************************/
 /*
-Generated ADDD_offset_offset_offset
+Generated I_ADDD_offset_offset_offset
 */
-static inline void process_ADDD_offset_offset_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_ADDD_offset_offset_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_DOUBLE(instr->second) && ZVAL_IS_DOUBLE(instr->third)) {
         ZVAL_SET_DOUBLE(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_DOUBLE(instr->first) - 1), ZVAL_GET_DOUBLE(instr->second) + ZVAL_GET_DOUBLE(instr->third));
@@ -176,9 +199,9 @@ static inline void process_ADDD_offset_offset_offsetinstr(struct __stack_t *stac
 }
 /********************************************************************************/
 /*
-Generated SUBI_int_int
+Generated I_SUBI_int_int
 */
-static inline void process_SUBI_int_intinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_SUBI_int_intinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_INT(instr->second) && ZVAL_IS_INT(instr->third)) {
         ZVAL_SET_INT(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_INT(instr->first) - 1), ZVAL_GET_INT(instr->second) - ZVAL_GET_INT(instr->third));
@@ -187,9 +210,9 @@ static inline void process_SUBI_int_intinstr(struct __stack_t *stack, instructio
 }
 /********************************************************************************/
 /*
-Generated SUBI_int_offset
+Generated I_SUBI_int_offset
 */
-static inline void process_SUBI_int_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_SUBI_int_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_INT(instr->second) && ZVAL_IS_INT(instr->third)) {
         ZVAL_SET_INT(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_INT(instr->first) - 1), ZVAL_GET_INT(instr->second) - ZVAL_GET_INT(instr->third));
@@ -198,9 +221,9 @@ static inline void process_SUBI_int_offsetinstr(struct __stack_t *stack, instruc
 }
 /********************************************************************************/
 /*
-Generated SUBI_offset_int
+Generated I_SUBI_offset_int
 */
-static inline void process_SUBI_offset_intinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_SUBI_offset_intinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_INT(instr->second) && ZVAL_IS_INT(instr->third)) {
         ZVAL_SET_INT(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_INT(instr->first) - 1), ZVAL_GET_INT(instr->second) - ZVAL_GET_INT(instr->third));
@@ -209,9 +232,9 @@ static inline void process_SUBI_offset_intinstr(struct __stack_t *stack, instruc
 }
 /********************************************************************************/
 /*
-Generated SUBI_offset_offset
+Generated I_SUBI_offset_offset
 */
-static inline void process_SUBI_offset_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_SUBI_offset_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_INT(instr->second) && ZVAL_IS_INT(instr->third)) {
         ZVAL_SET_INT(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_INT(instr->first) - 1), ZVAL_GET_INT(instr->second) - ZVAL_GET_INT(instr->third));
@@ -220,9 +243,9 @@ static inline void process_SUBI_offset_offsetinstr(struct __stack_t *stack, inst
 }
 /********************************************************************************/
 /*
-Generated SUBI_offset_int_int
+Generated I_SUBI_offset_int_int
 */
-static inline void process_SUBI_offset_int_intinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_SUBI_offset_int_intinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_INT(instr->second) && ZVAL_IS_INT(instr->third)) {
         ZVAL_SET_INT(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_INT(instr->first) - 1), ZVAL_GET_INT(instr->second) - ZVAL_GET_INT(instr->third));
@@ -231,9 +254,9 @@ static inline void process_SUBI_offset_int_intinstr(struct __stack_t *stack, ins
 }
 /********************************************************************************/
 /*
-Generated SUBI_offset_int_offset
+Generated I_SUBI_offset_int_offset
 */
-static inline void process_SUBI_offset_int_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_SUBI_offset_int_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_INT(instr->second) && ZVAL_IS_INT(instr->third)) {
         ZVAL_SET_INT(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_INT(instr->first) - 1), ZVAL_GET_INT(instr->second) - ZVAL_GET_INT(instr->third));
@@ -242,9 +265,9 @@ static inline void process_SUBI_offset_int_offsetinstr(struct __stack_t *stack, 
 }
 /********************************************************************************/
 /*
-Generated SUBI_offset_offset_int
+Generated I_SUBI_offset_offset_int
 */
-static inline void process_SUBI_offset_offset_intinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_SUBI_offset_offset_intinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_INT(instr->second) && ZVAL_IS_INT(instr->third)) {
         ZVAL_SET_INT(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_INT(instr->first) - 1), ZVAL_GET_INT(instr->second) - ZVAL_GET_INT(instr->third));
@@ -253,9 +276,9 @@ static inline void process_SUBI_offset_offset_intinstr(struct __stack_t *stack, 
 }
 /********************************************************************************/
 /*
-Generated SUBI_offset_offset_offset
+Generated I_SUBI_offset_offset_offset
 */
-static inline void process_SUBI_offset_offset_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_SUBI_offset_offset_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_INT(instr->second) && ZVAL_IS_INT(instr->third)) {
         ZVAL_SET_INT(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_INT(instr->first) - 1), ZVAL_GET_INT(instr->second) - ZVAL_GET_INT(instr->third));
@@ -264,9 +287,9 @@ static inline void process_SUBI_offset_offset_offsetinstr(struct __stack_t *stac
 }
 /********************************************************************************/
 /*
-Generated SUBD_double_double
+Generated I_SUBD_double_double
 */
-static inline void process_SUBD_double_doubleinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_SUBD_double_doubleinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_DOUBLE(instr->second) && ZVAL_IS_DOUBLE(instr->third)) {
         ZVAL_SET_DOUBLE(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_DOUBLE(instr->first) - 1), ZVAL_GET_DOUBLE(instr->second) - ZVAL_GET_DOUBLE(instr->third));
@@ -275,9 +298,9 @@ static inline void process_SUBD_double_doubleinstr(struct __stack_t *stack, inst
 }
 /********************************************************************************/
 /*
-Generated SUBD_double_offset
+Generated I_SUBD_double_offset
 */
-static inline void process_SUBD_double_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_SUBD_double_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_DOUBLE(instr->second) && ZVAL_IS_DOUBLE(instr->third)) {
         ZVAL_SET_DOUBLE(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_DOUBLE(instr->first) - 1), ZVAL_GET_DOUBLE(instr->second) - ZVAL_GET_DOUBLE(instr->third));
@@ -286,9 +309,9 @@ static inline void process_SUBD_double_offsetinstr(struct __stack_t *stack, inst
 }
 /********************************************************************************/
 /*
-Generated SUBD_offset_double
+Generated I_SUBD_offset_double
 */
-static inline void process_SUBD_offset_doubleinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_SUBD_offset_doubleinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_DOUBLE(instr->second) && ZVAL_IS_DOUBLE(instr->third)) {
         ZVAL_SET_DOUBLE(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_DOUBLE(instr->first) - 1), ZVAL_GET_DOUBLE(instr->second) - ZVAL_GET_DOUBLE(instr->third));
@@ -297,9 +320,9 @@ static inline void process_SUBD_offset_doubleinstr(struct __stack_t *stack, inst
 }
 /********************************************************************************/
 /*
-Generated SUBD_offset_offset
+Generated I_SUBD_offset_offset
 */
-static inline void process_SUBD_offset_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_SUBD_offset_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_DOUBLE(instr->second) && ZVAL_IS_DOUBLE(instr->third)) {
         ZVAL_SET_DOUBLE(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_DOUBLE(instr->first) - 1), ZVAL_GET_DOUBLE(instr->second) - ZVAL_GET_DOUBLE(instr->third));
@@ -308,9 +331,9 @@ static inline void process_SUBD_offset_offsetinstr(struct __stack_t *stack, inst
 }
 /********************************************************************************/
 /*
-Generated SUBD_offset_double_double
+Generated I_SUBD_offset_double_double
 */
-static inline void process_SUBD_offset_double_doubleinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_SUBD_offset_double_doubleinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_DOUBLE(instr->second) && ZVAL_IS_DOUBLE(instr->third)) {
         ZVAL_SET_DOUBLE(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_DOUBLE(instr->first) - 1), ZVAL_GET_DOUBLE(instr->second) - ZVAL_GET_DOUBLE(instr->third));
@@ -319,9 +342,9 @@ static inline void process_SUBD_offset_double_doubleinstr(struct __stack_t *stac
 }
 /********************************************************************************/
 /*
-Generated SUBD_offset_double_offset
+Generated I_SUBD_offset_double_offset
 */
-static inline void process_SUBD_offset_double_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_SUBD_offset_double_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_DOUBLE(instr->second) && ZVAL_IS_DOUBLE(instr->third)) {
         ZVAL_SET_DOUBLE(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_DOUBLE(instr->first) - 1), ZVAL_GET_DOUBLE(instr->second) - ZVAL_GET_DOUBLE(instr->third));
@@ -330,9 +353,9 @@ static inline void process_SUBD_offset_double_offsetinstr(struct __stack_t *stac
 }
 /********************************************************************************/
 /*
-Generated SUBD_offset_offset_double
+Generated I_SUBD_offset_offset_double
 */
-static inline void process_SUBD_offset_offset_doubleinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_SUBD_offset_offset_doubleinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_DOUBLE(instr->second) && ZVAL_IS_DOUBLE(instr->third)) {
         ZVAL_SET_DOUBLE(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_DOUBLE(instr->first) - 1), ZVAL_GET_DOUBLE(instr->second) - ZVAL_GET_DOUBLE(instr->third));
@@ -341,9 +364,9 @@ static inline void process_SUBD_offset_offset_doubleinstr(struct __stack_t *stac
 }
 /********************************************************************************/
 /*
-Generated SUBD_offset_offset_offset
+Generated I_SUBD_offset_offset_offset
 */
-static inline void process_SUBD_offset_offset_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_SUBD_offset_offset_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_DOUBLE(instr->second) && ZVAL_IS_DOUBLE(instr->third)) {
         ZVAL_SET_DOUBLE(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_DOUBLE(instr->first) - 1), ZVAL_GET_DOUBLE(instr->second) - ZVAL_GET_DOUBLE(instr->third));
@@ -352,9 +375,9 @@ static inline void process_SUBD_offset_offset_offsetinstr(struct __stack_t *stac
 }
 /********************************************************************************/
 /*
-Generated MULI_int_int
+Generated I_MULI_int_int
 */
-static inline void process_MULI_int_intinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_MULI_int_intinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_INT(instr->second) && ZVAL_IS_INT(instr->third)) {
         ZVAL_SET_INT(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_INT(instr->first) - 1), ZVAL_GET_INT(instr->second) * ZVAL_GET_INT(instr->third));
@@ -363,9 +386,9 @@ static inline void process_MULI_int_intinstr(struct __stack_t *stack, instructio
 }
 /********************************************************************************/
 /*
-Generated MULI_int_offset
+Generated I_MULI_int_offset
 */
-static inline void process_MULI_int_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_MULI_int_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_INT(instr->second) && ZVAL_IS_INT(instr->third)) {
         ZVAL_SET_INT(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_INT(instr->first) - 1), ZVAL_GET_INT(instr->second) * ZVAL_GET_INT(instr->third));
@@ -374,9 +397,9 @@ static inline void process_MULI_int_offsetinstr(struct __stack_t *stack, instruc
 }
 /********************************************************************************/
 /*
-Generated MULI_offset_int
+Generated I_MULI_offset_int
 */
-static inline void process_MULI_offset_intinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_MULI_offset_intinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_INT(instr->second) && ZVAL_IS_INT(instr->third)) {
         ZVAL_SET_INT(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_INT(instr->first) - 1), ZVAL_GET_INT(instr->second) * ZVAL_GET_INT(instr->third));
@@ -385,9 +408,9 @@ static inline void process_MULI_offset_intinstr(struct __stack_t *stack, instruc
 }
 /********************************************************************************/
 /*
-Generated MULI_offset_offset
+Generated I_MULI_offset_offset
 */
-static inline void process_MULI_offset_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_MULI_offset_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_INT(instr->second) && ZVAL_IS_INT(instr->third)) {
         ZVAL_SET_INT(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_INT(instr->first) - 1), ZVAL_GET_INT(instr->second) * ZVAL_GET_INT(instr->third));
@@ -396,9 +419,9 @@ static inline void process_MULI_offset_offsetinstr(struct __stack_t *stack, inst
 }
 /********************************************************************************/
 /*
-Generated MULI_offset_int_int
+Generated I_MULI_offset_int_int
 */
-static inline void process_MULI_offset_int_intinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_MULI_offset_int_intinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_INT(instr->second) && ZVAL_IS_INT(instr->third)) {
         ZVAL_SET_INT(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_INT(instr->first) - 1), ZVAL_GET_INT(instr->second) * ZVAL_GET_INT(instr->third));
@@ -407,9 +430,9 @@ static inline void process_MULI_offset_int_intinstr(struct __stack_t *stack, ins
 }
 /********************************************************************************/
 /*
-Generated MULI_offset_int_offset
+Generated I_MULI_offset_int_offset
 */
-static inline void process_MULI_offset_int_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_MULI_offset_int_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_INT(instr->second) && ZVAL_IS_INT(instr->third)) {
         ZVAL_SET_INT(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_INT(instr->first) - 1), ZVAL_GET_INT(instr->second) * ZVAL_GET_INT(instr->third));
@@ -418,9 +441,9 @@ static inline void process_MULI_offset_int_offsetinstr(struct __stack_t *stack, 
 }
 /********************************************************************************/
 /*
-Generated MULI_offset_offset_int
+Generated I_MULI_offset_offset_int
 */
-static inline void process_MULI_offset_offset_intinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_MULI_offset_offset_intinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_INT(instr->second) && ZVAL_IS_INT(instr->third)) {
         ZVAL_SET_INT(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_INT(instr->first) - 1), ZVAL_GET_INT(instr->second) * ZVAL_GET_INT(instr->third));
@@ -429,9 +452,9 @@ static inline void process_MULI_offset_offset_intinstr(struct __stack_t *stack, 
 }
 /********************************************************************************/
 /*
-Generated MULI_offset_offset_offset
+Generated I_MULI_offset_offset_offset
 */
-static inline void process_MULI_offset_offset_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_MULI_offset_offset_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_INT(instr->second) && ZVAL_IS_INT(instr->third)) {
         ZVAL_SET_INT(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_INT(instr->first) - 1), ZVAL_GET_INT(instr->second) * ZVAL_GET_INT(instr->third));
@@ -440,9 +463,9 @@ static inline void process_MULI_offset_offset_offsetinstr(struct __stack_t *stac
 }
 /********************************************************************************/
 /*
-Generated MULD_double_double
+Generated I_MULD_double_double
 */
-static inline void process_MULD_double_doubleinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_MULD_double_doubleinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_DOUBLE(instr->second) && ZVAL_IS_DOUBLE(instr->third)) {
         ZVAL_SET_DOUBLE(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_DOUBLE(instr->first) - 1), ZVAL_GET_DOUBLE(instr->second) * ZVAL_GET_DOUBLE(instr->third));
@@ -451,9 +474,9 @@ static inline void process_MULD_double_doubleinstr(struct __stack_t *stack, inst
 }
 /********************************************************************************/
 /*
-Generated MULD_double_offset
+Generated I_MULD_double_offset
 */
-static inline void process_MULD_double_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_MULD_double_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_DOUBLE(instr->second) && ZVAL_IS_DOUBLE(instr->third)) {
         ZVAL_SET_DOUBLE(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_DOUBLE(instr->first) - 1), ZVAL_GET_DOUBLE(instr->second) * ZVAL_GET_DOUBLE(instr->third));
@@ -462,9 +485,9 @@ static inline void process_MULD_double_offsetinstr(struct __stack_t *stack, inst
 }
 /********************************************************************************/
 /*
-Generated MULD_offset_double
+Generated I_MULD_offset_double
 */
-static inline void process_MULD_offset_doubleinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_MULD_offset_doubleinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_DOUBLE(instr->second) && ZVAL_IS_DOUBLE(instr->third)) {
         ZVAL_SET_DOUBLE(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_DOUBLE(instr->first) - 1), ZVAL_GET_DOUBLE(instr->second) * ZVAL_GET_DOUBLE(instr->third));
@@ -473,9 +496,9 @@ static inline void process_MULD_offset_doubleinstr(struct __stack_t *stack, inst
 }
 /********************************************************************************/
 /*
-Generated MULD_offset_offset
+Generated I_MULD_offset_offset
 */
-static inline void process_MULD_offset_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_MULD_offset_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_DOUBLE(instr->second) && ZVAL_IS_DOUBLE(instr->third)) {
         ZVAL_SET_DOUBLE(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_DOUBLE(instr->first) - 1), ZVAL_GET_DOUBLE(instr->second) * ZVAL_GET_DOUBLE(instr->third));
@@ -484,9 +507,9 @@ static inline void process_MULD_offset_offsetinstr(struct __stack_t *stack, inst
 }
 /********************************************************************************/
 /*
-Generated MULD_offset_double_double
+Generated I_MULD_offset_double_double
 */
-static inline void process_MULD_offset_double_doubleinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_MULD_offset_double_doubleinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_DOUBLE(instr->second) && ZVAL_IS_DOUBLE(instr->third)) {
         ZVAL_SET_DOUBLE(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_DOUBLE(instr->first) - 1), ZVAL_GET_DOUBLE(instr->second) * ZVAL_GET_DOUBLE(instr->third));
@@ -495,9 +518,9 @@ static inline void process_MULD_offset_double_doubleinstr(struct __stack_t *stac
 }
 /********************************************************************************/
 /*
-Generated MULD_offset_double_offset
+Generated I_MULD_offset_double_offset
 */
-static inline void process_MULD_offset_double_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_MULD_offset_double_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_DOUBLE(instr->second) && ZVAL_IS_DOUBLE(instr->third)) {
         ZVAL_SET_DOUBLE(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_DOUBLE(instr->first) - 1), ZVAL_GET_DOUBLE(instr->second) * ZVAL_GET_DOUBLE(instr->third));
@@ -506,9 +529,9 @@ static inline void process_MULD_offset_double_offsetinstr(struct __stack_t *stac
 }
 /********************************************************************************/
 /*
-Generated MULD_offset_offset_double
+Generated I_MULD_offset_offset_double
 */
-static inline void process_MULD_offset_offset_doubleinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_MULD_offset_offset_doubleinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_DOUBLE(instr->second) && ZVAL_IS_DOUBLE(instr->third)) {
         ZVAL_SET_DOUBLE(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_DOUBLE(instr->first) - 1), ZVAL_GET_DOUBLE(instr->second) * ZVAL_GET_DOUBLE(instr->third));
@@ -517,9 +540,9 @@ static inline void process_MULD_offset_offset_doubleinstr(struct __stack_t *stac
 }
 /********************************************************************************/
 /*
-Generated MULD_offset_offset_offset
+Generated I_MULD_offset_offset_offset
 */
-static inline void process_MULD_offset_offset_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_MULD_offset_offset_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_DOUBLE(instr->second) && ZVAL_IS_DOUBLE(instr->third)) {
         ZVAL_SET_DOUBLE(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_DOUBLE(instr->first) - 1), ZVAL_GET_DOUBLE(instr->second) * ZVAL_GET_DOUBLE(instr->third));
@@ -528,9 +551,9 @@ static inline void process_MULD_offset_offset_offsetinstr(struct __stack_t *stac
 }
 /********************************************************************************/
 /*
-Generated DIVI_int_int
+Generated I_DIVI_int_int
 */
-static inline void process_DIVI_int_intinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_DIVI_int_intinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_INT(instr->second) && ZVAL_IS_INT(instr->third)) {
         ZVAL_SET_INT(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_INT(instr->first) - 1), ZVAL_GET_INT(instr->second) / ZVAL_GET_INT(instr->third));
@@ -539,9 +562,9 @@ static inline void process_DIVI_int_intinstr(struct __stack_t *stack, instructio
 }
 /********************************************************************************/
 /*
-Generated DIVI_int_offset
+Generated I_DIVI_int_offset
 */
-static inline void process_DIVI_int_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_DIVI_int_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_INT(instr->second) && ZVAL_IS_INT(instr->third)) {
         ZVAL_SET_INT(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_INT(instr->first) - 1), ZVAL_GET_INT(instr->second) / ZVAL_GET_INT(instr->third));
@@ -550,9 +573,9 @@ static inline void process_DIVI_int_offsetinstr(struct __stack_t *stack, instruc
 }
 /********************************************************************************/
 /*
-Generated DIVI_offset_int
+Generated I_DIVI_offset_int
 */
-static inline void process_DIVI_offset_intinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_DIVI_offset_intinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_INT(instr->second) && ZVAL_IS_INT(instr->third)) {
         ZVAL_SET_INT(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_INT(instr->first) - 1), ZVAL_GET_INT(instr->second) / ZVAL_GET_INT(instr->third));
@@ -561,9 +584,9 @@ static inline void process_DIVI_offset_intinstr(struct __stack_t *stack, instruc
 }
 /********************************************************************************/
 /*
-Generated DIVI_offset_offset
+Generated I_DIVI_offset_offset
 */
-static inline void process_DIVI_offset_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_DIVI_offset_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_INT(instr->second) && ZVAL_IS_INT(instr->third)) {
         ZVAL_SET_INT(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_INT(instr->first) - 1), ZVAL_GET_INT(instr->second) / ZVAL_GET_INT(instr->third));
@@ -572,9 +595,9 @@ static inline void process_DIVI_offset_offsetinstr(struct __stack_t *stack, inst
 }
 /********************************************************************************/
 /*
-Generated DIVI_offset_int_int
+Generated I_DIVI_offset_int_int
 */
-static inline void process_DIVI_offset_int_intinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_DIVI_offset_int_intinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_INT(instr->second) && ZVAL_IS_INT(instr->third)) {
         ZVAL_SET_INT(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_INT(instr->first) - 1), ZVAL_GET_INT(instr->second) / ZVAL_GET_INT(instr->third));
@@ -583,9 +606,9 @@ static inline void process_DIVI_offset_int_intinstr(struct __stack_t *stack, ins
 }
 /********************************************************************************/
 /*
-Generated DIVI_offset_int_offset
+Generated I_DIVI_offset_int_offset
 */
-static inline void process_DIVI_offset_int_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_DIVI_offset_int_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_INT(instr->second) && ZVAL_IS_INT(instr->third)) {
         ZVAL_SET_INT(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_INT(instr->first) - 1), ZVAL_GET_INT(instr->second) / ZVAL_GET_INT(instr->third));
@@ -594,9 +617,9 @@ static inline void process_DIVI_offset_int_offsetinstr(struct __stack_t *stack, 
 }
 /********************************************************************************/
 /*
-Generated DIVI_offset_offset_int
+Generated I_DIVI_offset_offset_int
 */
-static inline void process_DIVI_offset_offset_intinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_DIVI_offset_offset_intinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_INT(instr->second) && ZVAL_IS_INT(instr->third)) {
         ZVAL_SET_INT(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_INT(instr->first) - 1), ZVAL_GET_INT(instr->second) / ZVAL_GET_INT(instr->third));
@@ -605,9 +628,9 @@ static inline void process_DIVI_offset_offset_intinstr(struct __stack_t *stack, 
 }
 /********************************************************************************/
 /*
-Generated DIVI_offset_offset_offset
+Generated I_DIVI_offset_offset_offset
 */
-static inline void process_DIVI_offset_offset_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_DIVI_offset_offset_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_INT(instr->second) && ZVAL_IS_INT(instr->third)) {
         ZVAL_SET_INT(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_INT(instr->first) - 1), ZVAL_GET_INT(instr->second) / ZVAL_GET_INT(instr->third));
@@ -616,9 +639,9 @@ static inline void process_DIVI_offset_offset_offsetinstr(struct __stack_t *stac
 }
 /********************************************************************************/
 /*
-Generated DIVD_double_double
+Generated I_DIVD_double_double
 */
-static inline void process_DIVD_double_doubleinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_DIVD_double_doubleinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_DOUBLE(instr->second) && ZVAL_IS_DOUBLE(instr->third)) {
         ZVAL_SET_DOUBLE(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_DOUBLE(instr->first) - 1), ZVAL_GET_DOUBLE(instr->second) / ZVAL_GET_DOUBLE(instr->third));
@@ -627,9 +650,9 @@ static inline void process_DIVD_double_doubleinstr(struct __stack_t *stack, inst
 }
 /********************************************************************************/
 /*
-Generated DIVD_double_offset
+Generated I_DIVD_double_offset
 */
-static inline void process_DIVD_double_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_DIVD_double_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_DOUBLE(instr->second) && ZVAL_IS_DOUBLE(instr->third)) {
         ZVAL_SET_DOUBLE(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_DOUBLE(instr->first) - 1), ZVAL_GET_DOUBLE(instr->second) / ZVAL_GET_DOUBLE(instr->third));
@@ -638,9 +661,9 @@ static inline void process_DIVD_double_offsetinstr(struct __stack_t *stack, inst
 }
 /********************************************************************************/
 /*
-Generated DIVD_offset_double
+Generated I_DIVD_offset_double
 */
-static inline void process_DIVD_offset_doubleinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_DIVD_offset_doubleinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_DOUBLE(instr->second) && ZVAL_IS_DOUBLE(instr->third)) {
         ZVAL_SET_DOUBLE(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_DOUBLE(instr->first) - 1), ZVAL_GET_DOUBLE(instr->second) / ZVAL_GET_DOUBLE(instr->third));
@@ -649,9 +672,9 @@ static inline void process_DIVD_offset_doubleinstr(struct __stack_t *stack, inst
 }
 /********************************************************************************/
 /*
-Generated DIVD_offset_offset
+Generated I_DIVD_offset_offset
 */
-static inline void process_DIVD_offset_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_DIVD_offset_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_DOUBLE(instr->second) && ZVAL_IS_DOUBLE(instr->third)) {
         ZVAL_SET_DOUBLE(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_DOUBLE(instr->first) - 1), ZVAL_GET_DOUBLE(instr->second) / ZVAL_GET_DOUBLE(instr->third));
@@ -660,9 +683,9 @@ static inline void process_DIVD_offset_offsetinstr(struct __stack_t *stack, inst
 }
 /********************************************************************************/
 /*
-Generated DIVD_offset_double_double
+Generated I_DIVD_offset_double_double
 */
-static inline void process_DIVD_offset_double_doubleinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_DIVD_offset_double_doubleinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_DOUBLE(instr->second) && ZVAL_IS_DOUBLE(instr->third)) {
         ZVAL_SET_DOUBLE(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_DOUBLE(instr->first) - 1), ZVAL_GET_DOUBLE(instr->second) / ZVAL_GET_DOUBLE(instr->third));
@@ -671,9 +694,9 @@ static inline void process_DIVD_offset_double_doubleinstr(struct __stack_t *stac
 }
 /********************************************************************************/
 /*
-Generated DIVD_offset_double_offset
+Generated I_DIVD_offset_double_offset
 */
-static inline void process_DIVD_offset_double_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_DIVD_offset_double_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_DOUBLE(instr->second) && ZVAL_IS_DOUBLE(instr->third)) {
         ZVAL_SET_DOUBLE(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_DOUBLE(instr->first) - 1), ZVAL_GET_DOUBLE(instr->second) / ZVAL_GET_DOUBLE(instr->third));
@@ -682,9 +705,9 @@ static inline void process_DIVD_offset_double_offsetinstr(struct __stack_t *stac
 }
 /********************************************************************************/
 /*
-Generated DIVD_offset_offset_double
+Generated I_DIVD_offset_offset_double
 */
-static inline void process_DIVD_offset_offset_doubleinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_DIVD_offset_offset_doubleinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_DOUBLE(instr->second) && ZVAL_IS_DOUBLE(instr->third)) {
         ZVAL_SET_DOUBLE(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_DOUBLE(instr->first) - 1), ZVAL_GET_DOUBLE(instr->second) / ZVAL_GET_DOUBLE(instr->third));
@@ -693,9 +716,9 @@ static inline void process_DIVD_offset_offset_doubleinstr(struct __stack_t *stac
 }
 /********************************************************************************/
 /*
-Generated DIVD_offset_offset_offset
+Generated I_DIVD_offset_offset_offset
 */
-static inline void process_DIVD_offset_offset_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_DIVD_offset_offset_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_DOUBLE(instr->second) && ZVAL_IS_DOUBLE(instr->third)) {
         ZVAL_SET_DOUBLE(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_DOUBLE(instr->first) - 1), ZVAL_GET_DOUBLE(instr->second) / ZVAL_GET_DOUBLE(instr->third));
@@ -704,9 +727,9 @@ static inline void process_DIVD_offset_offset_offsetinstr(struct __stack_t *stac
 }
 /********************************************************************************/
 /*
-Generated CMPLI_int_int
+Generated I_CMPLI_int_int
 */
-static inline void process_CMPLI_int_intinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPLI_int_intinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_INT(instr->second) && ZVAL_IS_INT(instr->third)) {
         ZVAL_SET_INT(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_INT(instr->first) - 1), ZVAL_GET_INT(instr->second) < ZVAL_GET_INT(instr->third));
@@ -715,9 +738,9 @@ static inline void process_CMPLI_int_intinstr(struct __stack_t *stack, instructi
 }
 /********************************************************************************/
 /*
-Generated CMPLI_int_offset
+Generated I_CMPLI_int_offset
 */
-static inline void process_CMPLI_int_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPLI_int_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_INT(instr->second) && ZVAL_IS_INT(instr->third)) {
         ZVAL_SET_INT(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_INT(instr->first) - 1), ZVAL_GET_INT(instr->second) < ZVAL_GET_INT(instr->third));
@@ -726,9 +749,9 @@ static inline void process_CMPLI_int_offsetinstr(struct __stack_t *stack, instru
 }
 /********************************************************************************/
 /*
-Generated CMPLI_offset_int
+Generated I_CMPLI_offset_int
 */
-static inline void process_CMPLI_offset_intinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPLI_offset_intinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_INT(instr->second) && ZVAL_IS_INT(instr->third)) {
         ZVAL_SET_INT(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_INT(instr->first) - 1), ZVAL_GET_INT(instr->second) < ZVAL_GET_INT(instr->third));
@@ -737,9 +760,9 @@ static inline void process_CMPLI_offset_intinstr(struct __stack_t *stack, instru
 }
 /********************************************************************************/
 /*
-Generated CMPLI_offset_offset
+Generated I_CMPLI_offset_offset
 */
-static inline void process_CMPLI_offset_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPLI_offset_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_INT(instr->second) && ZVAL_IS_INT(instr->third)) {
         ZVAL_SET_INT(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_INT(instr->first) - 1), ZVAL_GET_INT(instr->second) < ZVAL_GET_INT(instr->third));
@@ -748,9 +771,9 @@ static inline void process_CMPLI_offset_offsetinstr(struct __stack_t *stack, ins
 }
 /********************************************************************************/
 /*
-Generated CMPLI_offset_int_int
+Generated I_CMPLI_offset_int_int
 */
-static inline void process_CMPLI_offset_int_intinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPLI_offset_int_intinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_INT(instr->second) && ZVAL_IS_INT(instr->third)) {
         ZVAL_SET_INT(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_INT(instr->first) - 1), ZVAL_GET_INT(instr->second) < ZVAL_GET_INT(instr->third));
@@ -759,9 +782,9 @@ static inline void process_CMPLI_offset_int_intinstr(struct __stack_t *stack, in
 }
 /********************************************************************************/
 /*
-Generated CMPLI_offset_int_offset
+Generated I_CMPLI_offset_int_offset
 */
-static inline void process_CMPLI_offset_int_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPLI_offset_int_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_INT(instr->second) && ZVAL_IS_INT(instr->third)) {
         ZVAL_SET_INT(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_INT(instr->first) - 1), ZVAL_GET_INT(instr->second) < ZVAL_GET_INT(instr->third));
@@ -770,9 +793,9 @@ static inline void process_CMPLI_offset_int_offsetinstr(struct __stack_t *stack,
 }
 /********************************************************************************/
 /*
-Generated CMPLI_offset_offset_int
+Generated I_CMPLI_offset_offset_int
 */
-static inline void process_CMPLI_offset_offset_intinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPLI_offset_offset_intinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_INT(instr->second) && ZVAL_IS_INT(instr->third)) {
         ZVAL_SET_INT(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_INT(instr->first) - 1), ZVAL_GET_INT(instr->second) < ZVAL_GET_INT(instr->third));
@@ -781,9 +804,9 @@ static inline void process_CMPLI_offset_offset_intinstr(struct __stack_t *stack,
 }
 /********************************************************************************/
 /*
-Generated CMPLI_offset_offset_offset
+Generated I_CMPLI_offset_offset_offset
 */
-static inline void process_CMPLI_offset_offset_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPLI_offset_offset_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_INT(instr->second) && ZVAL_IS_INT(instr->third)) {
         ZVAL_SET_INT(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_INT(instr->first) - 1), ZVAL_GET_INT(instr->second) < ZVAL_GET_INT(instr->third));
@@ -792,9 +815,9 @@ static inline void process_CMPLI_offset_offset_offsetinstr(struct __stack_t *sta
 }
 /********************************************************************************/
 /*
-Generated CMPLD_double_double
+Generated I_CMPLD_double_double
 */
-static inline void process_CMPLD_double_doubleinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPLD_double_doubleinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_DOUBLE(instr->second) && ZVAL_IS_DOUBLE(instr->third)) {
         ZVAL_SET_DOUBLE(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_DOUBLE(instr->first) - 1), ZVAL_GET_DOUBLE(instr->second) < ZVAL_GET_DOUBLE(instr->third));
@@ -803,9 +826,9 @@ static inline void process_CMPLD_double_doubleinstr(struct __stack_t *stack, ins
 }
 /********************************************************************************/
 /*
-Generated CMPLD_double_offset
+Generated I_CMPLD_double_offset
 */
-static inline void process_CMPLD_double_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPLD_double_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_DOUBLE(instr->second) && ZVAL_IS_DOUBLE(instr->third)) {
         ZVAL_SET_DOUBLE(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_DOUBLE(instr->first) - 1), ZVAL_GET_DOUBLE(instr->second) < ZVAL_GET_DOUBLE(instr->third));
@@ -814,9 +837,9 @@ static inline void process_CMPLD_double_offsetinstr(struct __stack_t *stack, ins
 }
 /********************************************************************************/
 /*
-Generated CMPLD_offset_double
+Generated I_CMPLD_offset_double
 */
-static inline void process_CMPLD_offset_doubleinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPLD_offset_doubleinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_DOUBLE(instr->second) && ZVAL_IS_DOUBLE(instr->third)) {
         ZVAL_SET_DOUBLE(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_DOUBLE(instr->first) - 1), ZVAL_GET_DOUBLE(instr->second) < ZVAL_GET_DOUBLE(instr->third));
@@ -825,9 +848,9 @@ static inline void process_CMPLD_offset_doubleinstr(struct __stack_t *stack, ins
 }
 /********************************************************************************/
 /*
-Generated CMPLD_offset_offset
+Generated I_CMPLD_offset_offset
 */
-static inline void process_CMPLD_offset_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPLD_offset_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_DOUBLE(instr->second) && ZVAL_IS_DOUBLE(instr->third)) {
         ZVAL_SET_DOUBLE(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_DOUBLE(instr->first) - 1), ZVAL_GET_DOUBLE(instr->second) < ZVAL_GET_DOUBLE(instr->third));
@@ -836,9 +859,9 @@ static inline void process_CMPLD_offset_offsetinstr(struct __stack_t *stack, ins
 }
 /********************************************************************************/
 /*
-Generated CMPLD_offset_double_double
+Generated I_CMPLD_offset_double_double
 */
-static inline void process_CMPLD_offset_double_doubleinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPLD_offset_double_doubleinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_DOUBLE(instr->second) && ZVAL_IS_DOUBLE(instr->third)) {
         ZVAL_SET_DOUBLE(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_DOUBLE(instr->first) - 1), ZVAL_GET_DOUBLE(instr->second) < ZVAL_GET_DOUBLE(instr->third));
@@ -847,9 +870,9 @@ static inline void process_CMPLD_offset_double_doubleinstr(struct __stack_t *sta
 }
 /********************************************************************************/
 /*
-Generated CMPLD_offset_double_offset
+Generated I_CMPLD_offset_double_offset
 */
-static inline void process_CMPLD_offset_double_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPLD_offset_double_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_DOUBLE(instr->second) && ZVAL_IS_DOUBLE(instr->third)) {
         ZVAL_SET_DOUBLE(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_DOUBLE(instr->first) - 1), ZVAL_GET_DOUBLE(instr->second) < ZVAL_GET_DOUBLE(instr->third));
@@ -858,9 +881,9 @@ static inline void process_CMPLD_offset_double_offsetinstr(struct __stack_t *sta
 }
 /********************************************************************************/
 /*
-Generated CMPLD_offset_offset_double
+Generated I_CMPLD_offset_offset_double
 */
-static inline void process_CMPLD_offset_offset_doubleinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPLD_offset_offset_doubleinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_DOUBLE(instr->second) && ZVAL_IS_DOUBLE(instr->third)) {
         ZVAL_SET_DOUBLE(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_DOUBLE(instr->first) - 1), ZVAL_GET_DOUBLE(instr->second) < ZVAL_GET_DOUBLE(instr->third));
@@ -869,9 +892,9 @@ static inline void process_CMPLD_offset_offset_doubleinstr(struct __stack_t *sta
 }
 /********************************************************************************/
 /*
-Generated CMPLD_offset_offset_offset
+Generated I_CMPLD_offset_offset_offset
 */
-static inline void process_CMPLD_offset_offset_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPLD_offset_offset_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_DOUBLE(instr->second) && ZVAL_IS_DOUBLE(instr->third)) {
         ZVAL_SET_DOUBLE(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_DOUBLE(instr->first) - 1), ZVAL_GET_DOUBLE(instr->second) < ZVAL_GET_DOUBLE(instr->third));
@@ -880,9 +903,9 @@ static inline void process_CMPLD_offset_offset_offsetinstr(struct __stack_t *sta
 }
 /********************************************************************************/
 /*
-Generated CMPMI_int_int
+Generated I_CMPMI_int_int
 */
-static inline void process_CMPMI_int_intinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPMI_int_intinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_INT(instr->second) && ZVAL_IS_INT(instr->third)) {
         ZVAL_SET_INT(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_INT(instr->first) - 1), ZVAL_GET_INT(instr->second) > ZVAL_GET_INT(instr->third));
@@ -891,9 +914,9 @@ static inline void process_CMPMI_int_intinstr(struct __stack_t *stack, instructi
 }
 /********************************************************************************/
 /*
-Generated CMPMI_int_offset
+Generated I_CMPMI_int_offset
 */
-static inline void process_CMPMI_int_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPMI_int_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_INT(instr->second) && ZVAL_IS_INT(instr->third)) {
         ZVAL_SET_INT(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_INT(instr->first) - 1), ZVAL_GET_INT(instr->second) > ZVAL_GET_INT(instr->third));
@@ -902,9 +925,9 @@ static inline void process_CMPMI_int_offsetinstr(struct __stack_t *stack, instru
 }
 /********************************************************************************/
 /*
-Generated CMPMI_offset_int
+Generated I_CMPMI_offset_int
 */
-static inline void process_CMPMI_offset_intinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPMI_offset_intinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_INT(instr->second) && ZVAL_IS_INT(instr->third)) {
         ZVAL_SET_INT(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_INT(instr->first) - 1), ZVAL_GET_INT(instr->second) > ZVAL_GET_INT(instr->third));
@@ -913,9 +936,9 @@ static inline void process_CMPMI_offset_intinstr(struct __stack_t *stack, instru
 }
 /********************************************************************************/
 /*
-Generated CMPMI_offset_offset
+Generated I_CMPMI_offset_offset
 */
-static inline void process_CMPMI_offset_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPMI_offset_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_INT(instr->second) && ZVAL_IS_INT(instr->third)) {
         ZVAL_SET_INT(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_INT(instr->first) - 1), ZVAL_GET_INT(instr->second) > ZVAL_GET_INT(instr->third));
@@ -924,9 +947,9 @@ static inline void process_CMPMI_offset_offsetinstr(struct __stack_t *stack, ins
 }
 /********************************************************************************/
 /*
-Generated CMPMI_offset_int_int
+Generated I_CMPMI_offset_int_int
 */
-static inline void process_CMPMI_offset_int_intinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPMI_offset_int_intinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_INT(instr->second) && ZVAL_IS_INT(instr->third)) {
         ZVAL_SET_INT(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_INT(instr->first) - 1), ZVAL_GET_INT(instr->second) > ZVAL_GET_INT(instr->third));
@@ -935,9 +958,9 @@ static inline void process_CMPMI_offset_int_intinstr(struct __stack_t *stack, in
 }
 /********************************************************************************/
 /*
-Generated CMPMI_offset_int_offset
+Generated I_CMPMI_offset_int_offset
 */
-static inline void process_CMPMI_offset_int_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPMI_offset_int_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_INT(instr->second) && ZVAL_IS_INT(instr->third)) {
         ZVAL_SET_INT(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_INT(instr->first) - 1), ZVAL_GET_INT(instr->second) > ZVAL_GET_INT(instr->third));
@@ -946,9 +969,9 @@ static inline void process_CMPMI_offset_int_offsetinstr(struct __stack_t *stack,
 }
 /********************************************************************************/
 /*
-Generated CMPMI_offset_offset_int
+Generated I_CMPMI_offset_offset_int
 */
-static inline void process_CMPMI_offset_offset_intinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPMI_offset_offset_intinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_INT(instr->second) && ZVAL_IS_INT(instr->third)) {
         ZVAL_SET_INT(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_INT(instr->first) - 1), ZVAL_GET_INT(instr->second) > ZVAL_GET_INT(instr->third));
@@ -957,9 +980,9 @@ static inline void process_CMPMI_offset_offset_intinstr(struct __stack_t *stack,
 }
 /********************************************************************************/
 /*
-Generated CMPMI_offset_offset_offset
+Generated I_CMPMI_offset_offset_offset
 */
-static inline void process_CMPMI_offset_offset_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPMI_offset_offset_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_INT(instr->second) && ZVAL_IS_INT(instr->third)) {
         ZVAL_SET_INT(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_INT(instr->first) - 1), ZVAL_GET_INT(instr->second) > ZVAL_GET_INT(instr->third));
@@ -968,9 +991,9 @@ static inline void process_CMPMI_offset_offset_offsetinstr(struct __stack_t *sta
 }
 /********************************************************************************/
 /*
-Generated CMPMD_double_double
+Generated I_CMPMD_double_double
 */
-static inline void process_CMPMD_double_doubleinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPMD_double_doubleinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_DOUBLE(instr->second) && ZVAL_IS_DOUBLE(instr->third)) {
         ZVAL_SET_DOUBLE(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_DOUBLE(instr->first) - 1), ZVAL_GET_DOUBLE(instr->second) > ZVAL_GET_DOUBLE(instr->third));
@@ -979,9 +1002,9 @@ static inline void process_CMPMD_double_doubleinstr(struct __stack_t *stack, ins
 }
 /********************************************************************************/
 /*
-Generated CMPMD_double_offset
+Generated I_CMPMD_double_offset
 */
-static inline void process_CMPMD_double_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPMD_double_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_DOUBLE(instr->second) && ZVAL_IS_DOUBLE(instr->third)) {
         ZVAL_SET_DOUBLE(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_DOUBLE(instr->first) - 1), ZVAL_GET_DOUBLE(instr->second) > ZVAL_GET_DOUBLE(instr->third));
@@ -990,9 +1013,9 @@ static inline void process_CMPMD_double_offsetinstr(struct __stack_t *stack, ins
 }
 /********************************************************************************/
 /*
-Generated CMPMD_offset_double
+Generated I_CMPMD_offset_double
 */
-static inline void process_CMPMD_offset_doubleinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPMD_offset_doubleinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_DOUBLE(instr->second) && ZVAL_IS_DOUBLE(instr->third)) {
         ZVAL_SET_DOUBLE(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_DOUBLE(instr->first) - 1), ZVAL_GET_DOUBLE(instr->second) > ZVAL_GET_DOUBLE(instr->third));
@@ -1001,9 +1024,9 @@ static inline void process_CMPMD_offset_doubleinstr(struct __stack_t *stack, ins
 }
 /********************************************************************************/
 /*
-Generated CMPMD_offset_offset
+Generated I_CMPMD_offset_offset
 */
-static inline void process_CMPMD_offset_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPMD_offset_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_DOUBLE(instr->second) && ZVAL_IS_DOUBLE(instr->third)) {
         ZVAL_SET_DOUBLE(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_DOUBLE(instr->first) - 1), ZVAL_GET_DOUBLE(instr->second) > ZVAL_GET_DOUBLE(instr->third));
@@ -1012,9 +1035,9 @@ static inline void process_CMPMD_offset_offsetinstr(struct __stack_t *stack, ins
 }
 /********************************************************************************/
 /*
-Generated CMPMD_offset_double_double
+Generated I_CMPMD_offset_double_double
 */
-static inline void process_CMPMD_offset_double_doubleinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPMD_offset_double_doubleinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_DOUBLE(instr->second) && ZVAL_IS_DOUBLE(instr->third)) {
         ZVAL_SET_DOUBLE(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_DOUBLE(instr->first) - 1), ZVAL_GET_DOUBLE(instr->second) > ZVAL_GET_DOUBLE(instr->third));
@@ -1023,9 +1046,9 @@ static inline void process_CMPMD_offset_double_doubleinstr(struct __stack_t *sta
 }
 /********************************************************************************/
 /*
-Generated CMPMD_offset_double_offset
+Generated I_CMPMD_offset_double_offset
 */
-static inline void process_CMPMD_offset_double_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPMD_offset_double_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_DOUBLE(instr->second) && ZVAL_IS_DOUBLE(instr->third)) {
         ZVAL_SET_DOUBLE(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_DOUBLE(instr->first) - 1), ZVAL_GET_DOUBLE(instr->second) > ZVAL_GET_DOUBLE(instr->third));
@@ -1034,9 +1057,9 @@ static inline void process_CMPMD_offset_double_offsetinstr(struct __stack_t *sta
 }
 /********************************************************************************/
 /*
-Generated CMPMD_offset_offset_double
+Generated I_CMPMD_offset_offset_double
 */
-static inline void process_CMPMD_offset_offset_doubleinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPMD_offset_offset_doubleinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_DOUBLE(instr->second) && ZVAL_IS_DOUBLE(instr->third)) {
         ZVAL_SET_DOUBLE(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_DOUBLE(instr->first) - 1), ZVAL_GET_DOUBLE(instr->second) > ZVAL_GET_DOUBLE(instr->third));
@@ -1045,9 +1068,9 @@ static inline void process_CMPMD_offset_offset_doubleinstr(struct __stack_t *sta
 }
 /********************************************************************************/
 /*
-Generated CMPMD_offset_offset_offset
+Generated I_CMPMD_offset_offset_offset
 */
-static inline void process_CMPMD_offset_offset_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPMD_offset_offset_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_DOUBLE(instr->second) && ZVAL_IS_DOUBLE(instr->third)) {
         ZVAL_SET_DOUBLE(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_DOUBLE(instr->first) - 1), ZVAL_GET_DOUBLE(instr->second) > ZVAL_GET_DOUBLE(instr->third));
@@ -1056,9 +1079,9 @@ static inline void process_CMPMD_offset_offset_offsetinstr(struct __stack_t *sta
 }
 /********************************************************************************/
 /*
-Generated CMPLEI_int_int
+Generated I_CMPLEI_int_int
 */
-static inline void process_CMPLEI_int_intinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPLEI_int_intinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_INT(instr->second) && ZVAL_IS_INT(instr->third)) {
         ZVAL_SET_INT(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_INT(instr->first) - 1), ZVAL_GET_INT(instr->second) <= ZVAL_GET_INT(instr->third));
@@ -1067,9 +1090,9 @@ static inline void process_CMPLEI_int_intinstr(struct __stack_t *stack, instruct
 }
 /********************************************************************************/
 /*
-Generated CMPLEI_int_offset
+Generated I_CMPLEI_int_offset
 */
-static inline void process_CMPLEI_int_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPLEI_int_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_INT(instr->second) && ZVAL_IS_INT(instr->third)) {
         ZVAL_SET_INT(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_INT(instr->first) - 1), ZVAL_GET_INT(instr->second) <= ZVAL_GET_INT(instr->third));
@@ -1078,9 +1101,9 @@ static inline void process_CMPLEI_int_offsetinstr(struct __stack_t *stack, instr
 }
 /********************************************************************************/
 /*
-Generated CMPLEI_offset_int
+Generated I_CMPLEI_offset_int
 */
-static inline void process_CMPLEI_offset_intinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPLEI_offset_intinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_INT(instr->second) && ZVAL_IS_INT(instr->third)) {
         ZVAL_SET_INT(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_INT(instr->first) - 1), ZVAL_GET_INT(instr->second) <= ZVAL_GET_INT(instr->third));
@@ -1089,9 +1112,9 @@ static inline void process_CMPLEI_offset_intinstr(struct __stack_t *stack, instr
 }
 /********************************************************************************/
 /*
-Generated CMPLEI_offset_offset
+Generated I_CMPLEI_offset_offset
 */
-static inline void process_CMPLEI_offset_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPLEI_offset_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_INT(instr->second) && ZVAL_IS_INT(instr->third)) {
         ZVAL_SET_INT(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_INT(instr->first) - 1), ZVAL_GET_INT(instr->second) <= ZVAL_GET_INT(instr->third));
@@ -1100,9 +1123,9 @@ static inline void process_CMPLEI_offset_offsetinstr(struct __stack_t *stack, in
 }
 /********************************************************************************/
 /*
-Generated CMPLEI_offset_int_int
+Generated I_CMPLEI_offset_int_int
 */
-static inline void process_CMPLEI_offset_int_intinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPLEI_offset_int_intinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_INT(instr->second) && ZVAL_IS_INT(instr->third)) {
         ZVAL_SET_INT(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_INT(instr->first) - 1), ZVAL_GET_INT(instr->second) <= ZVAL_GET_INT(instr->third));
@@ -1111,9 +1134,9 @@ static inline void process_CMPLEI_offset_int_intinstr(struct __stack_t *stack, i
 }
 /********************************************************************************/
 /*
-Generated CMPLEI_offset_int_offset
+Generated I_CMPLEI_offset_int_offset
 */
-static inline void process_CMPLEI_offset_int_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPLEI_offset_int_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_INT(instr->second) && ZVAL_IS_INT(instr->third)) {
         ZVAL_SET_INT(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_INT(instr->first) - 1), ZVAL_GET_INT(instr->second) <= ZVAL_GET_INT(instr->third));
@@ -1122,9 +1145,9 @@ static inline void process_CMPLEI_offset_int_offsetinstr(struct __stack_t *stack
 }
 /********************************************************************************/
 /*
-Generated CMPLEI_offset_offset_int
+Generated I_CMPLEI_offset_offset_int
 */
-static inline void process_CMPLEI_offset_offset_intinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPLEI_offset_offset_intinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_INT(instr->second) && ZVAL_IS_INT(instr->third)) {
         ZVAL_SET_INT(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_INT(instr->first) - 1), ZVAL_GET_INT(instr->second) <= ZVAL_GET_INT(instr->third));
@@ -1133,9 +1156,9 @@ static inline void process_CMPLEI_offset_offset_intinstr(struct __stack_t *stack
 }
 /********************************************************************************/
 /*
-Generated CMPLEI_offset_offset_offset
+Generated I_CMPLEI_offset_offset_offset
 */
-static inline void process_CMPLEI_offset_offset_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPLEI_offset_offset_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_INT(instr->second) && ZVAL_IS_INT(instr->third)) {
         ZVAL_SET_INT(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_INT(instr->first) - 1), ZVAL_GET_INT(instr->second) <= ZVAL_GET_INT(instr->third));
@@ -1144,9 +1167,9 @@ static inline void process_CMPLEI_offset_offset_offsetinstr(struct __stack_t *st
 }
 /********************************************************************************/
 /*
-Generated CMPLED_double_double
+Generated I_CMPLED_double_double
 */
-static inline void process_CMPLED_double_doubleinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPLED_double_doubleinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_DOUBLE(instr->second) && ZVAL_IS_DOUBLE(instr->third)) {
         ZVAL_SET_DOUBLE(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_DOUBLE(instr->first) - 1), ZVAL_GET_DOUBLE(instr->second) <= ZVAL_GET_DOUBLE(instr->third));
@@ -1155,9 +1178,9 @@ static inline void process_CMPLED_double_doubleinstr(struct __stack_t *stack, in
 }
 /********************************************************************************/
 /*
-Generated CMPLED_double_offset
+Generated I_CMPLED_double_offset
 */
-static inline void process_CMPLED_double_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPLED_double_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_DOUBLE(instr->second) && ZVAL_IS_DOUBLE(instr->third)) {
         ZVAL_SET_DOUBLE(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_DOUBLE(instr->first) - 1), ZVAL_GET_DOUBLE(instr->second) <= ZVAL_GET_DOUBLE(instr->third));
@@ -1166,9 +1189,9 @@ static inline void process_CMPLED_double_offsetinstr(struct __stack_t *stack, in
 }
 /********************************************************************************/
 /*
-Generated CMPLED_offset_double
+Generated I_CMPLED_offset_double
 */
-static inline void process_CMPLED_offset_doubleinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPLED_offset_doubleinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_DOUBLE(instr->second) && ZVAL_IS_DOUBLE(instr->third)) {
         ZVAL_SET_DOUBLE(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_DOUBLE(instr->first) - 1), ZVAL_GET_DOUBLE(instr->second) <= ZVAL_GET_DOUBLE(instr->third));
@@ -1177,9 +1200,9 @@ static inline void process_CMPLED_offset_doubleinstr(struct __stack_t *stack, in
 }
 /********************************************************************************/
 /*
-Generated CMPLED_offset_offset
+Generated I_CMPLED_offset_offset
 */
-static inline void process_CMPLED_offset_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPLED_offset_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_DOUBLE(instr->second) && ZVAL_IS_DOUBLE(instr->third)) {
         ZVAL_SET_DOUBLE(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_DOUBLE(instr->first) - 1), ZVAL_GET_DOUBLE(instr->second) <= ZVAL_GET_DOUBLE(instr->third));
@@ -1188,9 +1211,9 @@ static inline void process_CMPLED_offset_offsetinstr(struct __stack_t *stack, in
 }
 /********************************************************************************/
 /*
-Generated CMPLED_offset_double_double
+Generated I_CMPLED_offset_double_double
 */
-static inline void process_CMPLED_offset_double_doubleinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPLED_offset_double_doubleinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_DOUBLE(instr->second) && ZVAL_IS_DOUBLE(instr->third)) {
         ZVAL_SET_DOUBLE(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_DOUBLE(instr->first) - 1), ZVAL_GET_DOUBLE(instr->second) <= ZVAL_GET_DOUBLE(instr->third));
@@ -1199,9 +1222,9 @@ static inline void process_CMPLED_offset_double_doubleinstr(struct __stack_t *st
 }
 /********************************************************************************/
 /*
-Generated CMPLED_offset_double_offset
+Generated I_CMPLED_offset_double_offset
 */
-static inline void process_CMPLED_offset_double_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPLED_offset_double_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_DOUBLE(instr->second) && ZVAL_IS_DOUBLE(instr->third)) {
         ZVAL_SET_DOUBLE(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_DOUBLE(instr->first) - 1), ZVAL_GET_DOUBLE(instr->second) <= ZVAL_GET_DOUBLE(instr->third));
@@ -1210,9 +1233,9 @@ static inline void process_CMPLED_offset_double_offsetinstr(struct __stack_t *st
 }
 /********************************************************************************/
 /*
-Generated CMPLED_offset_offset_double
+Generated I_CMPLED_offset_offset_double
 */
-static inline void process_CMPLED_offset_offset_doubleinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPLED_offset_offset_doubleinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_DOUBLE(instr->second) && ZVAL_IS_DOUBLE(instr->third)) {
         ZVAL_SET_DOUBLE(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_DOUBLE(instr->first) - 1), ZVAL_GET_DOUBLE(instr->second) <= ZVAL_GET_DOUBLE(instr->third));
@@ -1221,9 +1244,9 @@ static inline void process_CMPLED_offset_offset_doubleinstr(struct __stack_t *st
 }
 /********************************************************************************/
 /*
-Generated CMPLED_offset_offset_offset
+Generated I_CMPLED_offset_offset_offset
 */
-static inline void process_CMPLED_offset_offset_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPLED_offset_offset_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_DOUBLE(instr->second) && ZVAL_IS_DOUBLE(instr->third)) {
         ZVAL_SET_DOUBLE(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_DOUBLE(instr->first) - 1), ZVAL_GET_DOUBLE(instr->second) <= ZVAL_GET_DOUBLE(instr->third));
@@ -1232,9 +1255,9 @@ static inline void process_CMPLED_offset_offset_offsetinstr(struct __stack_t *st
 }
 /********************************************************************************/
 /*
-Generated CMPMEI_int_int
+Generated I_CMPMEI_int_int
 */
-static inline void process_CMPMEI_int_intinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPMEI_int_intinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_INT(instr->second) && ZVAL_IS_INT(instr->third)) {
         ZVAL_SET_INT(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_INT(instr->first) - 1), ZVAL_GET_INT(instr->second) >= ZVAL_GET_INT(instr->third));
@@ -1243,9 +1266,9 @@ static inline void process_CMPMEI_int_intinstr(struct __stack_t *stack, instruct
 }
 /********************************************************************************/
 /*
-Generated CMPMEI_int_offset
+Generated I_CMPMEI_int_offset
 */
-static inline void process_CMPMEI_int_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPMEI_int_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_INT(instr->second) && ZVAL_IS_INT(instr->third)) {
         ZVAL_SET_INT(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_INT(instr->first) - 1), ZVAL_GET_INT(instr->second) >= ZVAL_GET_INT(instr->third));
@@ -1254,9 +1277,9 @@ static inline void process_CMPMEI_int_offsetinstr(struct __stack_t *stack, instr
 }
 /********************************************************************************/
 /*
-Generated CMPMEI_offset_int
+Generated I_CMPMEI_offset_int
 */
-static inline void process_CMPMEI_offset_intinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPMEI_offset_intinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_INT(instr->second) && ZVAL_IS_INT(instr->third)) {
         ZVAL_SET_INT(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_INT(instr->first) - 1), ZVAL_GET_INT(instr->second) >= ZVAL_GET_INT(instr->third));
@@ -1265,9 +1288,9 @@ static inline void process_CMPMEI_offset_intinstr(struct __stack_t *stack, instr
 }
 /********************************************************************************/
 /*
-Generated CMPMEI_offset_offset
+Generated I_CMPMEI_offset_offset
 */
-static inline void process_CMPMEI_offset_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPMEI_offset_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_INT(instr->second) && ZVAL_IS_INT(instr->third)) {
         ZVAL_SET_INT(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_INT(instr->first) - 1), ZVAL_GET_INT(instr->second) >= ZVAL_GET_INT(instr->third));
@@ -1276,9 +1299,9 @@ static inline void process_CMPMEI_offset_offsetinstr(struct __stack_t *stack, in
 }
 /********************************************************************************/
 /*
-Generated CMPMEI_offset_int_int
+Generated I_CMPMEI_offset_int_int
 */
-static inline void process_CMPMEI_offset_int_intinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPMEI_offset_int_intinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_INT(instr->second) && ZVAL_IS_INT(instr->third)) {
         ZVAL_SET_INT(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_INT(instr->first) - 1), ZVAL_GET_INT(instr->second) >= ZVAL_GET_INT(instr->third));
@@ -1287,9 +1310,9 @@ static inline void process_CMPMEI_offset_int_intinstr(struct __stack_t *stack, i
 }
 /********************************************************************************/
 /*
-Generated CMPMEI_offset_int_offset
+Generated I_CMPMEI_offset_int_offset
 */
-static inline void process_CMPMEI_offset_int_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPMEI_offset_int_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_INT(instr->second) && ZVAL_IS_INT(instr->third)) {
         ZVAL_SET_INT(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_INT(instr->first) - 1), ZVAL_GET_INT(instr->second) >= ZVAL_GET_INT(instr->third));
@@ -1298,9 +1321,9 @@ static inline void process_CMPMEI_offset_int_offsetinstr(struct __stack_t *stack
 }
 /********************************************************************************/
 /*
-Generated CMPMEI_offset_offset_int
+Generated I_CMPMEI_offset_offset_int
 */
-static inline void process_CMPMEI_offset_offset_intinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPMEI_offset_offset_intinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_INT(instr->second) && ZVAL_IS_INT(instr->third)) {
         ZVAL_SET_INT(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_INT(instr->first) - 1), ZVAL_GET_INT(instr->second) >= ZVAL_GET_INT(instr->third));
@@ -1309,9 +1332,9 @@ static inline void process_CMPMEI_offset_offset_intinstr(struct __stack_t *stack
 }
 /********************************************************************************/
 /*
-Generated CMPMEI_offset_offset_offset
+Generated I_CMPMEI_offset_offset_offset
 */
-static inline void process_CMPMEI_offset_offset_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPMEI_offset_offset_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_INT(instr->second) && ZVAL_IS_INT(instr->third)) {
         ZVAL_SET_INT(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_INT(instr->first) - 1), ZVAL_GET_INT(instr->second) >= ZVAL_GET_INT(instr->third));
@@ -1320,9 +1343,9 @@ static inline void process_CMPMEI_offset_offset_offsetinstr(struct __stack_t *st
 }
 /********************************************************************************/
 /*
-Generated CMPMED_double_double
+Generated I_CMPMED_double_double
 */
-static inline void process_CMPMED_double_doubleinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPMED_double_doubleinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_DOUBLE(instr->second) && ZVAL_IS_DOUBLE(instr->third)) {
         ZVAL_SET_DOUBLE(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_DOUBLE(instr->first) - 1), ZVAL_GET_DOUBLE(instr->second) >= ZVAL_GET_DOUBLE(instr->third));
@@ -1331,9 +1354,9 @@ static inline void process_CMPMED_double_doubleinstr(struct __stack_t *stack, in
 }
 /********************************************************************************/
 /*
-Generated CMPMED_double_offset
+Generated I_CMPMED_double_offset
 */
-static inline void process_CMPMED_double_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPMED_double_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_DOUBLE(instr->second) && ZVAL_IS_DOUBLE(instr->third)) {
         ZVAL_SET_DOUBLE(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_DOUBLE(instr->first) - 1), ZVAL_GET_DOUBLE(instr->second) >= ZVAL_GET_DOUBLE(instr->third));
@@ -1342,9 +1365,9 @@ static inline void process_CMPMED_double_offsetinstr(struct __stack_t *stack, in
 }
 /********************************************************************************/
 /*
-Generated CMPMED_offset_double
+Generated I_CMPMED_offset_double
 */
-static inline void process_CMPMED_offset_doubleinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPMED_offset_doubleinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_DOUBLE(instr->second) && ZVAL_IS_DOUBLE(instr->third)) {
         ZVAL_SET_DOUBLE(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_DOUBLE(instr->first) - 1), ZVAL_GET_DOUBLE(instr->second) >= ZVAL_GET_DOUBLE(instr->third));
@@ -1353,9 +1376,9 @@ static inline void process_CMPMED_offset_doubleinstr(struct __stack_t *stack, in
 }
 /********************************************************************************/
 /*
-Generated CMPMED_offset_offset
+Generated I_CMPMED_offset_offset
 */
-static inline void process_CMPMED_offset_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPMED_offset_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_DOUBLE(instr->second) && ZVAL_IS_DOUBLE(instr->third)) {
         ZVAL_SET_DOUBLE(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_DOUBLE(instr->first) - 1), ZVAL_GET_DOUBLE(instr->second) >= ZVAL_GET_DOUBLE(instr->third));
@@ -1364,9 +1387,9 @@ static inline void process_CMPMED_offset_offsetinstr(struct __stack_t *stack, in
 }
 /********************************************************************************/
 /*
-Generated CMPMED_offset_double_double
+Generated I_CMPMED_offset_double_double
 */
-static inline void process_CMPMED_offset_double_doubleinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPMED_offset_double_doubleinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_DOUBLE(instr->second) && ZVAL_IS_DOUBLE(instr->third)) {
         ZVAL_SET_DOUBLE(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_DOUBLE(instr->first) - 1), ZVAL_GET_DOUBLE(instr->second) >= ZVAL_GET_DOUBLE(instr->third));
@@ -1375,9 +1398,9 @@ static inline void process_CMPMED_offset_double_doubleinstr(struct __stack_t *st
 }
 /********************************************************************************/
 /*
-Generated CMPMED_offset_double_offset
+Generated I_CMPMED_offset_double_offset
 */
-static inline void process_CMPMED_offset_double_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPMED_offset_double_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_DOUBLE(instr->second) && ZVAL_IS_DOUBLE(instr->third)) {
         ZVAL_SET_DOUBLE(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_DOUBLE(instr->first) - 1), ZVAL_GET_DOUBLE(instr->second) >= ZVAL_GET_DOUBLE(instr->third));
@@ -1386,9 +1409,9 @@ static inline void process_CMPMED_offset_double_offsetinstr(struct __stack_t *st
 }
 /********************************************************************************/
 /*
-Generated CMPMED_offset_offset_double
+Generated I_CMPMED_offset_offset_double
 */
-static inline void process_CMPMED_offset_offset_doubleinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPMED_offset_offset_doubleinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_DOUBLE(instr->second) && ZVAL_IS_DOUBLE(instr->third)) {
         ZVAL_SET_DOUBLE(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_DOUBLE(instr->first) - 1), ZVAL_GET_DOUBLE(instr->second) >= ZVAL_GET_DOUBLE(instr->third));
@@ -1397,9 +1420,9 @@ static inline void process_CMPMED_offset_offset_doubleinstr(struct __stack_t *st
 }
 /********************************************************************************/
 /*
-Generated CMPMED_offset_offset_offset
+Generated I_CMPMED_offset_offset_offset
 */
-static inline void process_CMPMED_offset_offset_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPMED_offset_offset_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_DOUBLE(instr->second) && ZVAL_IS_DOUBLE(instr->third)) {
         ZVAL_SET_DOUBLE(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_DOUBLE(instr->first) - 1), ZVAL_GET_DOUBLE(instr->second) >= ZVAL_GET_DOUBLE(instr->third));
@@ -1408,9 +1431,9 @@ static inline void process_CMPMED_offset_offset_offsetinstr(struct __stack_t *st
 }
 /********************************************************************************/
 /*
-Generated CMPEI_int_int
+Generated I_CMPEI_int_int
 */
-static inline void process_CMPEI_int_intinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPEI_int_intinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_INT(instr->second) && ZVAL_IS_INT(instr->third)) {
         ZVAL_SET_INT(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_INT(instr->first) - 1), ZVAL_GET_INT(instr->second) == ZVAL_GET_INT(instr->third));
@@ -1419,9 +1442,9 @@ static inline void process_CMPEI_int_intinstr(struct __stack_t *stack, instructi
 }
 /********************************************************************************/
 /*
-Generated CMPEI_int_offset
+Generated I_CMPEI_int_offset
 */
-static inline void process_CMPEI_int_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPEI_int_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_INT(instr->second) && ZVAL_IS_INT(instr->third)) {
         ZVAL_SET_INT(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_INT(instr->first) - 1), ZVAL_GET_INT(instr->second) == ZVAL_GET_INT(instr->third));
@@ -1430,9 +1453,9 @@ static inline void process_CMPEI_int_offsetinstr(struct __stack_t *stack, instru
 }
 /********************************************************************************/
 /*
-Generated CMPEI_offset_int
+Generated I_CMPEI_offset_int
 */
-static inline void process_CMPEI_offset_intinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPEI_offset_intinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_INT(instr->second) && ZVAL_IS_INT(instr->third)) {
         ZVAL_SET_INT(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_INT(instr->first) - 1), ZVAL_GET_INT(instr->second) == ZVAL_GET_INT(instr->third));
@@ -1441,9 +1464,9 @@ static inline void process_CMPEI_offset_intinstr(struct __stack_t *stack, instru
 }
 /********************************************************************************/
 /*
-Generated CMPEI_offset_offset
+Generated I_CMPEI_offset_offset
 */
-static inline void process_CMPEI_offset_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPEI_offset_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_INT(instr->second) && ZVAL_IS_INT(instr->third)) {
         ZVAL_SET_INT(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_INT(instr->first) - 1), ZVAL_GET_INT(instr->second) == ZVAL_GET_INT(instr->third));
@@ -1452,9 +1475,9 @@ static inline void process_CMPEI_offset_offsetinstr(struct __stack_t *stack, ins
 }
 /********************************************************************************/
 /*
-Generated CMPEI_offset_int_int
+Generated I_CMPEI_offset_int_int
 */
-static inline void process_CMPEI_offset_int_intinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPEI_offset_int_intinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_INT(instr->second) && ZVAL_IS_INT(instr->third)) {
         ZVAL_SET_INT(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_INT(instr->first) - 1), ZVAL_GET_INT(instr->second) == ZVAL_GET_INT(instr->third));
@@ -1463,9 +1486,9 @@ static inline void process_CMPEI_offset_int_intinstr(struct __stack_t *stack, in
 }
 /********************************************************************************/
 /*
-Generated CMPEI_offset_int_offset
+Generated I_CMPEI_offset_int_offset
 */
-static inline void process_CMPEI_offset_int_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPEI_offset_int_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_INT(instr->second) && ZVAL_IS_INT(instr->third)) {
         ZVAL_SET_INT(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_INT(instr->first) - 1), ZVAL_GET_INT(instr->second) == ZVAL_GET_INT(instr->third));
@@ -1474,9 +1497,9 @@ static inline void process_CMPEI_offset_int_offsetinstr(struct __stack_t *stack,
 }
 /********************************************************************************/
 /*
-Generated CMPEI_offset_offset_int
+Generated I_CMPEI_offset_offset_int
 */
-static inline void process_CMPEI_offset_offset_intinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPEI_offset_offset_intinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_INT(instr->second) && ZVAL_IS_INT(instr->third)) {
         ZVAL_SET_INT(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_INT(instr->first) - 1), ZVAL_GET_INT(instr->second) == ZVAL_GET_INT(instr->third));
@@ -1485,9 +1508,9 @@ static inline void process_CMPEI_offset_offset_intinstr(struct __stack_t *stack,
 }
 /********************************************************************************/
 /*
-Generated CMPEI_offset_offset_offset
+Generated I_CMPEI_offset_offset_offset
 */
-static inline void process_CMPEI_offset_offset_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPEI_offset_offset_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_INT(instr->second) && ZVAL_IS_INT(instr->third)) {
         ZVAL_SET_INT(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_INT(instr->first) - 1), ZVAL_GET_INT(instr->second) == ZVAL_GET_INT(instr->third));
@@ -1496,9 +1519,9 @@ static inline void process_CMPEI_offset_offset_offsetinstr(struct __stack_t *sta
 }
 /********************************************************************************/
 /*
-Generated CMPED_double_double
+Generated I_CMPED_double_double
 */
-static inline void process_CMPED_double_doubleinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPED_double_doubleinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_DOUBLE(instr->second) && ZVAL_IS_DOUBLE(instr->third)) {
         ZVAL_SET_DOUBLE(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_DOUBLE(instr->first) - 1), ZVAL_GET_DOUBLE(instr->second) == ZVAL_GET_DOUBLE(instr->third));
@@ -1507,9 +1530,9 @@ static inline void process_CMPED_double_doubleinstr(struct __stack_t *stack, ins
 }
 /********************************************************************************/
 /*
-Generated CMPED_double_offset
+Generated I_CMPED_double_offset
 */
-static inline void process_CMPED_double_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPED_double_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_DOUBLE(instr->second) && ZVAL_IS_DOUBLE(instr->third)) {
         ZVAL_SET_DOUBLE(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_DOUBLE(instr->first) - 1), ZVAL_GET_DOUBLE(instr->second) == ZVAL_GET_DOUBLE(instr->third));
@@ -1518,9 +1541,9 @@ static inline void process_CMPED_double_offsetinstr(struct __stack_t *stack, ins
 }
 /********************************************************************************/
 /*
-Generated CMPED_offset_double
+Generated I_CMPED_offset_double
 */
-static inline void process_CMPED_offset_doubleinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPED_offset_doubleinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_DOUBLE(instr->second) && ZVAL_IS_DOUBLE(instr->third)) {
         ZVAL_SET_DOUBLE(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_DOUBLE(instr->first) - 1), ZVAL_GET_DOUBLE(instr->second) == ZVAL_GET_DOUBLE(instr->third));
@@ -1529,9 +1552,9 @@ static inline void process_CMPED_offset_doubleinstr(struct __stack_t *stack, ins
 }
 /********************************************************************************/
 /*
-Generated CMPED_offset_offset
+Generated I_CMPED_offset_offset
 */
-static inline void process_CMPED_offset_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPED_offset_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_DOUBLE(instr->second) && ZVAL_IS_DOUBLE(instr->third)) {
         ZVAL_SET_DOUBLE(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_DOUBLE(instr->first) - 1), ZVAL_GET_DOUBLE(instr->second) == ZVAL_GET_DOUBLE(instr->third));
@@ -1540,9 +1563,9 @@ static inline void process_CMPED_offset_offsetinstr(struct __stack_t *stack, ins
 }
 /********************************************************************************/
 /*
-Generated CMPED_offset_double_double
+Generated I_CMPED_offset_double_double
 */
-static inline void process_CMPED_offset_double_doubleinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPED_offset_double_doubleinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_DOUBLE(instr->second) && ZVAL_IS_DOUBLE(instr->third)) {
         ZVAL_SET_DOUBLE(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_DOUBLE(instr->first) - 1), ZVAL_GET_DOUBLE(instr->second) == ZVAL_GET_DOUBLE(instr->third));
@@ -1551,9 +1574,9 @@ static inline void process_CMPED_offset_double_doubleinstr(struct __stack_t *sta
 }
 /********************************************************************************/
 /*
-Generated CMPED_offset_double_offset
+Generated I_CMPED_offset_double_offset
 */
-static inline void process_CMPED_offset_double_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPED_offset_double_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_DOUBLE(instr->second) && ZVAL_IS_DOUBLE(instr->third)) {
         ZVAL_SET_DOUBLE(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_DOUBLE(instr->first) - 1), ZVAL_GET_DOUBLE(instr->second) == ZVAL_GET_DOUBLE(instr->third));
@@ -1562,9 +1585,9 @@ static inline void process_CMPED_offset_double_offsetinstr(struct __stack_t *sta
 }
 /********************************************************************************/
 /*
-Generated CMPED_offset_offset_double
+Generated I_CMPED_offset_offset_double
 */
-static inline void process_CMPED_offset_offset_doubleinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPED_offset_offset_doubleinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_DOUBLE(instr->second) && ZVAL_IS_DOUBLE(instr->third)) {
         ZVAL_SET_DOUBLE(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_DOUBLE(instr->first) - 1), ZVAL_GET_DOUBLE(instr->second) == ZVAL_GET_DOUBLE(instr->third));
@@ -1573,9 +1596,9 @@ static inline void process_CMPED_offset_offset_doubleinstr(struct __stack_t *sta
 }
 /********************************************************************************/
 /*
-Generated CMPED_offset_offset_offset
+Generated I_CMPED_offset_offset_offset
 */
-static inline void process_CMPED_offset_offset_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPED_offset_offset_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_DOUBLE(instr->second) && ZVAL_IS_DOUBLE(instr->third)) {
         ZVAL_SET_DOUBLE(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_DOUBLE(instr->first) - 1), ZVAL_GET_DOUBLE(instr->second) == ZVAL_GET_DOUBLE(instr->third));
@@ -1584,9 +1607,9 @@ static inline void process_CMPED_offset_offset_offsetinstr(struct __stack_t *sta
 }
 /********************************************************************************/
 /*
-Generated CMPNEI_int_int
+Generated I_CMPNEI_int_int
 */
-static inline void process_CMPNEI_int_intinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPNEI_int_intinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_INT(instr->second) && ZVAL_IS_INT(instr->third)) {
         ZVAL_SET_INT(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_INT(instr->first) - 1), ZVAL_GET_INT(instr->second) != ZVAL_GET_INT(instr->third));
@@ -1595,9 +1618,9 @@ static inline void process_CMPNEI_int_intinstr(struct __stack_t *stack, instruct
 }
 /********************************************************************************/
 /*
-Generated CMPNEI_int_offset
+Generated I_CMPNEI_int_offset
 */
-static inline void process_CMPNEI_int_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPNEI_int_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_INT(instr->second) && ZVAL_IS_INT(instr->third)) {
         ZVAL_SET_INT(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_INT(instr->first) - 1), ZVAL_GET_INT(instr->second) != ZVAL_GET_INT(instr->third));
@@ -1606,9 +1629,9 @@ static inline void process_CMPNEI_int_offsetinstr(struct __stack_t *stack, instr
 }
 /********************************************************************************/
 /*
-Generated CMPNEI_offset_int
+Generated I_CMPNEI_offset_int
 */
-static inline void process_CMPNEI_offset_intinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPNEI_offset_intinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_INT(instr->second) && ZVAL_IS_INT(instr->third)) {
         ZVAL_SET_INT(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_INT(instr->first) - 1), ZVAL_GET_INT(instr->second) != ZVAL_GET_INT(instr->third));
@@ -1617,9 +1640,9 @@ static inline void process_CMPNEI_offset_intinstr(struct __stack_t *stack, instr
 }
 /********************************************************************************/
 /*
-Generated CMPNEI_offset_offset
+Generated I_CMPNEI_offset_offset
 */
-static inline void process_CMPNEI_offset_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPNEI_offset_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_INT(instr->second) && ZVAL_IS_INT(instr->third)) {
         ZVAL_SET_INT(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_INT(instr->first) - 1), ZVAL_GET_INT(instr->second) != ZVAL_GET_INT(instr->third));
@@ -1628,9 +1651,9 @@ static inline void process_CMPNEI_offset_offsetinstr(struct __stack_t *stack, in
 }
 /********************************************************************************/
 /*
-Generated CMPNEI_offset_int_int
+Generated I_CMPNEI_offset_int_int
 */
-static inline void process_CMPNEI_offset_int_intinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPNEI_offset_int_intinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_INT(instr->second) && ZVAL_IS_INT(instr->third)) {
         ZVAL_SET_INT(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_INT(instr->first) - 1), ZVAL_GET_INT(instr->second) != ZVAL_GET_INT(instr->third));
@@ -1639,9 +1662,9 @@ static inline void process_CMPNEI_offset_int_intinstr(struct __stack_t *stack, i
 }
 /********************************************************************************/
 /*
-Generated CMPNEI_offset_int_offset
+Generated I_CMPNEI_offset_int_offset
 */
-static inline void process_CMPNEI_offset_int_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPNEI_offset_int_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_INT(instr->second) && ZVAL_IS_INT(instr->third)) {
         ZVAL_SET_INT(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_INT(instr->first) - 1), ZVAL_GET_INT(instr->second) != ZVAL_GET_INT(instr->third));
@@ -1650,9 +1673,9 @@ static inline void process_CMPNEI_offset_int_offsetinstr(struct __stack_t *stack
 }
 /********************************************************************************/
 /*
-Generated CMPNEI_offset_offset_int
+Generated I_CMPNEI_offset_offset_int
 */
-static inline void process_CMPNEI_offset_offset_intinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPNEI_offset_offset_intinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_INT(instr->second) && ZVAL_IS_INT(instr->third)) {
         ZVAL_SET_INT(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_INT(instr->first) - 1), ZVAL_GET_INT(instr->second) != ZVAL_GET_INT(instr->third));
@@ -1661,9 +1684,9 @@ static inline void process_CMPNEI_offset_offset_intinstr(struct __stack_t *stack
 }
 /********************************************************************************/
 /*
-Generated CMPNEI_offset_offset_offset
+Generated I_CMPNEI_offset_offset_offset
 */
-static inline void process_CMPNEI_offset_offset_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPNEI_offset_offset_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_INT(instr->second) && ZVAL_IS_INT(instr->third)) {
         ZVAL_SET_INT(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_INT(instr->first) - 1), ZVAL_GET_INT(instr->second) != ZVAL_GET_INT(instr->third));
@@ -1672,9 +1695,9 @@ static inline void process_CMPNEI_offset_offset_offsetinstr(struct __stack_t *st
 }
 /********************************************************************************/
 /*
-Generated CMPNED_double_double
+Generated I_CMPNED_double_double
 */
-static inline void process_CMPNED_double_doubleinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPNED_double_doubleinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_DOUBLE(instr->second) && ZVAL_IS_DOUBLE(instr->third)) {
         ZVAL_SET_DOUBLE(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_DOUBLE(instr->first) - 1), ZVAL_GET_DOUBLE(instr->second) != ZVAL_GET_DOUBLE(instr->third));
@@ -1683,9 +1706,9 @@ static inline void process_CMPNED_double_doubleinstr(struct __stack_t *stack, in
 }
 /********************************************************************************/
 /*
-Generated CMPNED_double_offset
+Generated I_CMPNED_double_offset
 */
-static inline void process_CMPNED_double_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPNED_double_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_DOUBLE(instr->second) && ZVAL_IS_DOUBLE(instr->third)) {
         ZVAL_SET_DOUBLE(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_DOUBLE(instr->first) - 1), ZVAL_GET_DOUBLE(instr->second) != ZVAL_GET_DOUBLE(instr->third));
@@ -1694,9 +1717,9 @@ static inline void process_CMPNED_double_offsetinstr(struct __stack_t *stack, in
 }
 /********************************************************************************/
 /*
-Generated CMPNED_offset_double
+Generated I_CMPNED_offset_double
 */
-static inline void process_CMPNED_offset_doubleinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPNED_offset_doubleinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_DOUBLE(instr->second) && ZVAL_IS_DOUBLE(instr->third)) {
         ZVAL_SET_DOUBLE(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_DOUBLE(instr->first) - 1), ZVAL_GET_DOUBLE(instr->second) != ZVAL_GET_DOUBLE(instr->third));
@@ -1705,9 +1728,9 @@ static inline void process_CMPNED_offset_doubleinstr(struct __stack_t *stack, in
 }
 /********************************************************************************/
 /*
-Generated CMPNED_offset_offset
+Generated I_CMPNED_offset_offset
 */
-static inline void process_CMPNED_offset_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPNED_offset_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_DOUBLE(instr->second) && ZVAL_IS_DOUBLE(instr->third)) {
         ZVAL_SET_DOUBLE(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_DOUBLE(instr->first) - 1), ZVAL_GET_DOUBLE(instr->second) != ZVAL_GET_DOUBLE(instr->third));
@@ -1716,9 +1739,9 @@ static inline void process_CMPNED_offset_offsetinstr(struct __stack_t *stack, in
 }
 /********************************************************************************/
 /*
-Generated CMPNED_offset_double_double
+Generated I_CMPNED_offset_double_double
 */
-static inline void process_CMPNED_offset_double_doubleinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPNED_offset_double_doubleinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_DOUBLE(instr->second) && ZVAL_IS_DOUBLE(instr->third)) {
         ZVAL_SET_DOUBLE(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_DOUBLE(instr->first) - 1), ZVAL_GET_DOUBLE(instr->second) != ZVAL_GET_DOUBLE(instr->third));
@@ -1727,9 +1750,9 @@ static inline void process_CMPNED_offset_double_doubleinstr(struct __stack_t *st
 }
 /********************************************************************************/
 /*
-Generated CMPNED_offset_double_offset
+Generated I_CMPNED_offset_double_offset
 */
-static inline void process_CMPNED_offset_double_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPNED_offset_double_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_DOUBLE(instr->second) && ZVAL_IS_DOUBLE(instr->third)) {
         ZVAL_SET_DOUBLE(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_DOUBLE(instr->first) - 1), ZVAL_GET_DOUBLE(instr->second) != ZVAL_GET_DOUBLE(instr->third));
@@ -1738,9 +1761,9 @@ static inline void process_CMPNED_offset_double_offsetinstr(struct __stack_t *st
 }
 /********************************************************************************/
 /*
-Generated CMPNED_offset_offset_double
+Generated I_CMPNED_offset_offset_double
 */
-static inline void process_CMPNED_offset_offset_doubleinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPNED_offset_offset_doubleinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_DOUBLE(instr->second) && ZVAL_IS_DOUBLE(instr->third)) {
         ZVAL_SET_DOUBLE(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_DOUBLE(instr->first) - 1), ZVAL_GET_DOUBLE(instr->second) != ZVAL_GET_DOUBLE(instr->third));
@@ -1749,9 +1772,9 @@ static inline void process_CMPNED_offset_offset_doubleinstr(struct __stack_t *st
 }
 /********************************************************************************/
 /*
-Generated CMPNED_offset_offset_offset
+Generated I_CMPNED_offset_offset_offset
 */
-static inline void process_CMPNED_offset_offset_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
+static inline void process_I_CMPNED_offset_offset_offsetinstr(struct __stack_t *stack, instruction_t *instr, const int offset)
 {
     if (ZVAL_IS_DOUBLE(instr->second) && ZVAL_IS_DOUBLE(instr->third)) {
         ZVAL_SET_DOUBLE(&kv_A(stack->data, stack->base_pointer + ZVAL_GET_DOUBLE(instr->first) - 1), ZVAL_GET_DOUBLE(instr->second) != ZVAL_GET_DOUBLE(instr->third));
@@ -1759,3 +1782,4 @@ static inline void process_CMPNED_offset_offset_offsetinstr(struct __stack_t *st
 		return;	
 }
 /********************************************************************************/
+#endif // GEN_PROCESSES_H
