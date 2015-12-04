@@ -22,7 +22,7 @@ instructions = [
 for instruction in instructions:
 	for i_type in i_types:
 		for p_type in p_types:
-			G=[]
+			G=[] # Prepac janko list nema join
 			for obsah in p_type:
 				if obsah == 'X':
 					if i_type == 'I':
@@ -31,8 +31,7 @@ for instruction in instructions:
 				  		G.append('double')
 				else: 
 					G.append('offset')
-			print G
-			print "_".join(G)
+			print instruction[0] + i_type +"_".join(G)
 			f_gen_instruc.write( instruc_templ.render(	i_name = instruction[0] + i_type, data_type = 'INT' if i_type == 'I' else 'DOUBLE', i_op = instruction[1], inst_type = "_".join(G)))
 					
 						
