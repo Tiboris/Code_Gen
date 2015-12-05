@@ -106,7 +106,7 @@ for instruction in aritm_instructions:
 				 		print_data="%d"
 				  	else:
 				  		G.append('double')
-				  		print_data="%u"
+				  		print_data="%.2f"
 				else: 
 					G.append('offset')
 			f_gen_instruc.write( instruc_templ.render(	inst_name = instruction[0] + i_type, data_type = 'INT' if i_type == 'I' else 'DOUBLE', proc_op = instruction[1], inst_type = "_".join(G)))
@@ -126,7 +126,7 @@ for instruction in aritm_instructions:
 				 		print_data="%d"
 				  	else:
 				  		H.append('double')
-				  		print_data="%u"
+				  		print_data="%.2f"
 				else: 
 					H.append('offset')
 				print "_".join(H)
@@ -141,7 +141,7 @@ for instruction in aritm_instructions:
 				 		print_data="%d"
 				  	else:
 				  		I.append('double')	
-				  		print_data="%u"
+				  		print_data="%.2f"
 				else: 
 					I.append('offset')
 
