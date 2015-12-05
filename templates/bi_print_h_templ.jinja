@@ -3,5 +3,5 @@
 Generated print_I_{{ inst_name }}_{{ inst_type }}
 */
 static inline void print_I_{{ inst_name }}_{{ inst_type }}_instr(instruction_t *instr) {
-    printf("I_{{ inst_name }}_{{ inst_type }}_instr\t{{ data }}\t{{ data }}\n", ZVAL_GET_{{ data_type }}(instr->first), ZVAL_GET_{{ data_type }}(instr->second), ZVAL_GET_{{ data_type }}(instr->third));
+    printf("I_{{ inst_name }}_{{ inst_type }}_instr\t{{ data }}\t{{ data }}\n", ZVAL_GET_{{ data_type }}(instr->second), ZVAL_GET_{{ data_type }}(instr->third));
 }

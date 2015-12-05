@@ -116,6 +116,7 @@ for instruction in aritm_instructions:
 			f_gen_print_c.write( print_c_templ.render(	inst_name = instruction[0] + i_type, data_type = 'INT' if i_type == 'I' else 'DOUBLE', proc_op = instruction[1], data=print_data, inst_type = "_".join(G)))			
 			f_gen_case.write( case_templ.render ( inst_name = instruction[0] + i_type, inst_type = "_".join(G) ))	
 			#there wass issue with print 2 or 3 operands to print so here are two fors up to row 140 on row 115 is without case that there are 2 or 3 operands in print
+			G=[]
 			for bi_obsah in p_types_bi:
 				if bi_obsah == 'X':
 					if i_type == 'I':
@@ -127,6 +128,7 @@ for instruction in aritm_instructions:
 				else: 
 					G.append('offset')
 			f_gen_print_h.write( bi_print_h_templ.render(	inst_name = instruction[0] + i_type, data_type = 'INT' if i_type == 'I' else 'DOUBLE', proc_op = instruction[1], data=print_data, inst_type = "_".join(G)))
+			G=[]
 			for tr_obsah in p_types_tr:
 				if tr_obsah == 'X':
 					if i_type == 'I':
