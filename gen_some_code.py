@@ -31,6 +31,7 @@ i_types = ['I', 'D']
 instruc_templ 	= Template( open('instruc_h_templ.jinja', 'r').read() )
 intrptr_templ 	= Template( open('intrptr_h_templ.jinja', 'r').read() )
 print_templ		= Template( open('print_h_templ.jinja', 'r').read() )
+case_templ		= Template( open('interpreter_case.jinja','r').read() )
 
 header_instr=open('header_instr', "r").read()
 header_procs=open('header_procs', "r").read()
@@ -46,10 +47,11 @@ f_gen_instruc = open("gen_instructions.h", "w")
 f_gen_intrprt = open("gen_interpreter_instr.h", "w")
 ####
 f_gen_print   = open("gen_print_instr.h","w")
+####
+f_gen_case   = open("gen_case_instr.c","w")
 
-
-f_gen_instruc.write(header_instr)
-f_gen_intrprt.write(header_procs)
+#f_gen_instruc.write(header_instr)
+#f_gen_intrprt.write(header_procs)
 
 
 ## INSTRUCTIONS
@@ -81,13 +83,13 @@ for instruction in aritm_instructions:
 				else: 
 					G.append('offset')
 
-			print instruction[0] + i_type +"_".join(G)
+			print instruction[0] #+ i_type +"_".join(G)
 			f_gen_instruc.write( instruc_templ.render(	inst_name = instruction[0] + i_type, data_type = 'INT' if i_type == 'I' else 'DOUBLE', proc_op = instruction[1], inst_type = "_".join(G)))
 			f_gen_intrprt.write( intrptr_templ.render(	inst_name = instruction[0] + i_type, data_type = 'INT' if i_type == 'I' else 'DOUBLE', proc_op = instruction[1], inst_type = "_".join(G)))			
 			f_gen_print.write( print_templ.render(	inst_name = instruction[0] + i_type, data_type = 'INT' if i_type == 'I' else 'DOUBLE', proc_op = instruction[1], data=print_data, inst_type = "_".join(G)))			
-			
-f_gen_instruc.write(footer_instr)
-f_gen_intrprt.write(footer_procs)
+			f_gen_case.write( case_templ.render ( inst_name = instruction[0] + i_type, inst_type = "_".join(G) ))			
+#f_gen_instruc.write(footer_instr)
+#f_gen_intrprt.write(footer_procs)
 
 
 
