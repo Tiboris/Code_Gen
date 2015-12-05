@@ -22,7 +22,6 @@ void print_instructions(klist_t(instruction_list) *instructions) {
         instruction_t *instr = kl_val(it);
         switch (instr->type)
         {
-
 			case I_ADDI_int_int:
 				print_I_ADDI_int_int_instr(instr);
 				break;
@@ -502,6 +501,7 @@ void print_instructions(klist_t(instruction_list) *instructions) {
 				break;
 			case I_CMPNED_offset_offset_offset:
 				print_I_CMPNED_offset_offset_offset_instr(instr);
-				break;        }
+				break;
+        }
     }
 }

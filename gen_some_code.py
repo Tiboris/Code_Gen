@@ -120,26 +120,26 @@ for instruction in aritm_instructions:
 			for bi_obsah in p_types_bi:
 				if bi_obsah == 'X':
 					if i_type == 'I':
-				 		G.append('int')
+				 		H.append('int')
 				 		print_data="%d"
 				  	else:
-				  		G.append('double')
+				  		H.append('double')
 				  		print_data="%u"
 				else: 
-					G.append('offset')
-			f_gen_print_h.write( bi_print_h_templ.render(	inst_name = instruction[0] + i_type, data_type = 'INT' if i_type == 'I' else 'DOUBLE', proc_op = instruction[1], data=print_data, inst_type = "_".join(G)))
+					H.append('offset')
+			f_gen_print_h.write( bi_print_h_templ.render(	inst_name = instruction[0] + i_type, data_type = 'INT' if i_type == 'I' else 'DOUBLE', proc_op = instruction[1], data=print_data, inst_type = "_".join(H)))
 			I=[]
 			for tr_obsah in p_types_tr:
 				if tr_obsah == 'X':
 					if i_type == 'I':
-				 		G.append('int')
+				 		I.append('int')
 				 		print_data="%d"
 				  	else:
-				  		G.append('double')	
+				  		I.append('double')	
 				  		print_data="%u"
 				else: 
-					G.append('offset')
-			f_gen_print_h.write( tr_print_h_templ.render(	inst_name = instruction[0] + i_type, data_type = 'INT' if i_type == 'I' else 'DOUBLE', proc_op = instruction[1], data=print_data, inst_type = "_".join(G)))
+					I.append('offset')
+			f_gen_print_h.write( tr_print_h_templ.render(	inst_name = instruction[0] + i_type, data_type = 'INT' if i_type == 'I' else 'DOUBLE', proc_op = instruction[1], data=print_data, inst_type = "_".join(I)))
 f_gen_instruc.write(footer_instr)
 f_gen_intrprt.write(footer_procs)
 f_gen_print_h.write(footer_print_h)
